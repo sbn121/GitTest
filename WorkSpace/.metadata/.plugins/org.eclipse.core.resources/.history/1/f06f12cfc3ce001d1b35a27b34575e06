@@ -1,0 +1,17 @@
+
+public class Test_06 {
+	public static void main(String[] args) {
+		int subKor, subMat, subEng, subSci, subPhy;
+		subKor = 10;
+		subMat = 11;
+		subEng = 12;
+		subSci = 13;
+		subPhy = 14;
+		System.out.println(subKor);
+		System.out.println(subMat);
+		System.out.println(subEng);
+		System.out.println(subSci);
+		System.out.println(subPhy);
+	}
+
+}

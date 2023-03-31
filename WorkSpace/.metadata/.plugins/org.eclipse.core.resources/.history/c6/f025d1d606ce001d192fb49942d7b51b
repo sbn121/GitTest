@@ -1,0 +1,21 @@
+package apck08_casting;
+
+public class Ex02_Casting {
+	public static void main(String[] args) {
+		// 문자열 = "12" + 34 = 답 1234
+		// String + int = 답 String
+		// Why? 문자열+ 어떤 값 = 문자열 규칙
+		// 문자열 결합의 법칙 
+		// "1"(String) =/= 1(숫자)
+		String sum = "12" + 34;
+		// 어떤 값을 String으로 바꾸는 것은 엄청나게 간단하다.
+		String sum2 = 1234 + ""  ;
+		System.out.println(sum2);
+		
+		//"1234" + "1234" = 12341234
+		//sum + sum2 = 12341234
+		//숫자 1234+1234=2468의 결과를 얻어야 한다.
+		System.out.println(sum + sum2);
+	}
+
+}

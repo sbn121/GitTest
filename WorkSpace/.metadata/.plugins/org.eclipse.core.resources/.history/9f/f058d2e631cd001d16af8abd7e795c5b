@@ -1,0 +1,7 @@
+package pack01_Valiable;
+
+public class Ex01_Valiable {
+public static void main(String[] args) {
+	System.out.println("SBN10");
+}
+}

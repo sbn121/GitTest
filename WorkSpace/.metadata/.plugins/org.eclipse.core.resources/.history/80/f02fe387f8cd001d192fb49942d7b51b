@@ -1,0 +1,15 @@
+package pack04_char;
+
+public class Ex01_Char {
+	public static void main(String[] args) {
+		//문자 데이터 타입 : char(2byte)
+		//하나의 글자만 저장 : 유니코드
+		//변수에 값을 할당(대입)할 때는 작은 따옴표를 사용한다.
+		//작은 따옴표 == 싱글 코테이션 == '
+		char cha1 = 'a' ;
+		char cha2 ;
+		cha2 = 'b' ;
+		System.out.println(cha1);
+	}
+
+}

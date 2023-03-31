@@ -1,0 +1,13 @@
+package pack03_Decimal;
+
+public class Ex01_Decimal {
+	public static void main(String[] args) {
+		int i = 1234567890;
+		System.out.println(i);
+		//int 이사의 값을 담을 수 있는 정수형 데이터타입이 존재함.
+		long l1 ;
+		long l2 = 12345678901L ;//숫자+long타입이라는 구분자
+		System.out.println(l2);
+	}
+
+}
