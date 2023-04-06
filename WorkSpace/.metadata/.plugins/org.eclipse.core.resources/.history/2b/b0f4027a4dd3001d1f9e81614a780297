@@ -1,0 +1,13 @@
+package pack02_switch;
+
+public class Test01_Switch {
+	public static void main(String[] args) {
+		int score = 90;
+		switch(score-70) {
+		case >=20 : {
+			System.out.println("A");
+		}
+		}
+	}
+
+}

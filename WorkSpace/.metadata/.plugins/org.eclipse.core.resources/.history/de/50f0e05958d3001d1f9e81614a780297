@@ -1,0 +1,28 @@
+package pack03_for;
+
+public class Ex02_For {
+public static void main(String[] args) {
+	//제어문은 무한하게 중첩이 가능하다.
+	 
+//	for(int i=1; i<=10; i++) {
+//		if(i%2==0) {
+//			System.out.println("짝수 "+i);
+//		}else {
+//			System.out.println("홀수 "+i);
+//		}
+//	}
+	int i1 = 0;
+	for(int i=1; i<=10; i++) {
+		System.out.println(i+i1++);
+		
+	}
+}
+}
+		
+		
+	
+	
+	
+	
+	
+

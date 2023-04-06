@@ -16,6 +16,8 @@ public class Ex03_Scanner {
 		// String data = sc.nextLine();
 		
 		
+		
+		
 	}
 
 }

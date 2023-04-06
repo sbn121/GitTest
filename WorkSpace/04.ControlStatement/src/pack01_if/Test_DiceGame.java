@@ -35,7 +35,8 @@ public class Test_DiceGame {
 			System.out.println("컴퓨터의 수" + comNum + "유저의 수" + userNum +
 					"무승부");
 		}
-	
+		
+		
 	}
 
 }
