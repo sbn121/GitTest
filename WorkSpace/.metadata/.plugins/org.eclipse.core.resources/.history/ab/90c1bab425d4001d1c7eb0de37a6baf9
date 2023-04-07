@@ -1,0 +1,13 @@
+package pack05_etc;
+
+public class Ex01_Break {
+public static void main(String[] args) {
+	//break문은 제어문을 종료하고 빠져나가는 기능
+	//무한루프하는 반복문 밑에 코드가 있으면 에러.(영원히 실행x코드)
+	while(true) {
+	System.out.println("출력");
+	}
+	
+	
+}
+}

@@ -1,0 +1,19 @@
+package pack06_game;
+
+import java.util.Scanner;
+
+public class Game01 {
+public static void main(String[] args) {
+//	int random = new Random().nextlnt(100)+1;
+	Scanner sc = new Scanner(System.in);
+	int num = Integer.parseInt(sc.nextLine());
+	
+	while(true) {
+		System.out.println("1부터 100사이의 정수를 입력하세요");
+	}
+	
+		
+		
+		
+}
+}
