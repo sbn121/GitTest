@@ -42,7 +42,27 @@ public static void main(String[] args) {
 			i2++;
 		}
 	}
-	
+	int j1=1; 
+	while(j1<=5) {
+		int j2=1; 
+		while(j2<=j1){
+			System.out.print("¡Ú");
+			j2++;
+		}
+		System.out.println();
+		j1++;
+	}
+	int j3=5;
+	while(j3>=1) {
+		int j4=1;
+		while(j4<=j3) {
+			System.out.print("¡Ú");
+			j4++;
+		}
+		j3--;
+		System.out.println();
+	}
+	while
 	
 	
 	

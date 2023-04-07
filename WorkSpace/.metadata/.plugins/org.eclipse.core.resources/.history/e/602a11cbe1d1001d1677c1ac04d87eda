@@ -1,0 +1,10 @@
+
+public class Ex02_Operator {
+	public static void main(String[] args) {
+	//복습하기 증감, 가감
+		int num1 = 1,  num2 = 1;
+		System.out.println(num1++);
+		System.out.println(++num2);
+}
+
+}

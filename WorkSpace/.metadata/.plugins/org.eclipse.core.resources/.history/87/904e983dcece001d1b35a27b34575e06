@@ -1,0 +1,14 @@
+package pack09_scanner;
+
+import java.util.Scanner;
+
+public class Ex02_Scanner {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String inputData = sc.nextLine();
+		int sum = Integer.parseInt(inputData)+20;
+		System.out.println(sum);
+		
+	}
+
+}

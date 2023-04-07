@@ -1,0 +1,38 @@
+
+public class Ex08_Oper {
+	public static void main(String[] args) {
+		//비교 연산자 : 조건문에 많이 사용됨.
+		//조건 : 어떤 식이 참인지 또는 거짓인지를 판단하는 것
+		//ID와 pw가 내가 입력한 값과 DB에 있는 값이
+		//일치하는지? "로그인" : "아이디 또는 비밀번호를 확인하세요"
+		//조건은 반드시 true와 false의 답을 얻을 수 있어야 한다.
+		int num1 = 10, num2 = 10;
+		//조건식을 사용하고나서는 결과가 반드시true, false가 나온다
+		//==, !=, <=, >=, <, >
+		boolean result1 = num1 == num2; //true
+		boolean result2 = num1 != num2; //false
+		boolean result3 = num1 <= num2; //true
+		System.out.println(result1);
+		System.out.println(result2);
+		System.out.println(result3);
+		System.out.println(num1 == num2);
+		System.out.println(num1 != num2);
+		System.out.println(num1 <= num2);
+		System.out.println(num1 >= num2);//t
+		System.out.println(num1 < num2); //f
+		System.out.println(num1 > num2); //f
+		
+		//식을 연결 : 논리 연산자 (여러 개의 조건을 판단)
+		//최종적인 결과 true or false의 결과만 나온다.
+		//조건식A&&조건식B : 조건식 A가 참, 조건식 B도 참일 경우 >외에는 FALSE
+		//&&(AND, *, 논리곱) : 1*1=1, 1*0=0;
+		//조건식A||조건식B : 조건식 A, B가 둘 다 거짓인 경우 제외 모두 참
+		//||(OR, +, 논리합):1+?=0, 0+0=0;
+		
+		System.out.println("구분");
+		System.out.println(10>5&&20>5);//t
+		
+		
+	}
+
+}

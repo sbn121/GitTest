@@ -1,0 +1,23 @@
+package pack04_while;
+
+public class Ex02_While {
+	public static void main(String[] args) {
+		int i =0;
+		int j =0;
+		while(i<=10) {
+			j=i+j;
+			i++;
+			System.out.println(j);
+			
+		}
+		int k=0;
+		for(int l=1;l<=10;l++) {
+			k=l+k;
+			System.out.println(k);
+			
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package pack03_for;
+
+public class Ex02_For {
+public static void main(String[] args) {
+	//Á¦¾î¹®Àº ¹«ÇÑÇÏ°Ô ÁßÃ¸ÀÌ °¡´ÉÇÏ´Ù.
+	for(int i=1; i<=10; i++) {
+		if(i%2==0) {
+			System.out.println("Â¦¼ö "+i);
+		}else {
+			System.out.println("È¦¼ö "+i);
+		}System.out.println(i%2==0?"Â¦¼ö":"È¦¼ö");
+	}
+	
+	}
+}

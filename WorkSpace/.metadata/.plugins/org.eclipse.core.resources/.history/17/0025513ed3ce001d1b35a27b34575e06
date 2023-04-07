@@ -1,0 +1,12 @@
+package pack09_scanner;
+
+import java.util.Scanner;
+
+public class Ex03_Scanner {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String data3 = sc.nextLine();
+		System.out.println(data3);
+	}
+
+}
