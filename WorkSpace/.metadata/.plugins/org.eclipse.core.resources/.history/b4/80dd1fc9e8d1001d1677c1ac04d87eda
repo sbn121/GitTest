@@ -1,9 +1,0 @@
-
-public class Ex05_Oper {
-	public static void main(String[] args) {
-		int result =0;
-		System.out.println(10 +result);
-		
-	}
-
-}
