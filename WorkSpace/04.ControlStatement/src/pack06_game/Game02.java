@@ -4,41 +4,26 @@ import java.util.Scanner;
 
 public class Game02 {
 public static void main(String[] args) {
-	
+	System.out.println("국어점수를 입력하세요 :");
 	Scanner sc = new Scanner(System.in);
-	int scoKor, scoEng, scoMat;
-	
-	while(true) {
-		System.out.println("국어 점수를 입력하세요");
-		scoKor = Integer.parseInt(sc.nextLine());
-		if(scoKor>100||scoKor<0) {
-			System.out.println("다시 입력하세요");continue;
-		}break;
+	String data1 =sc.nextLine();
+	int scoKor = Integer.parseInt(data1);
+	if(scoKor<0||scoKor>100) {
+		System.out.println("다시 입력하세요");
 	}
-	while(true) {
-		System.out.println("영어 점수를 입력하세요");
-		scoEng = Integer.parseInt(sc.nextLine());
-		if(scoEng>100||scoEng<0) {
-			System.out.println("다시 입력하세요");continue;
-		}break;
+	System.out.println("영어점수를 입력하세요 :");
+	String data2 =sc.nextLine();
+	int scoEng = Integer.parseInt(data1);
+	if(scoEng<0||scoEng>100) {
+		System.out.println("다시 입력하세요");
 	}
-	while(true) {
-		System.out.println("수학 점수를 입력하세요");
-		scoMat = Integer.parseInt(sc.nextLine());
-		if(scoMat>100||scoMat<0) {
-			System.out.println("다시 입력하세요");continue;
-		}break;
+	System.out.println("수학점수를 입력하세요 :");
+	String data3 =sc.nextLine();
+	int scoMat = Integer.parseInt(data1);
+	if(scoMat<0||scoMat>100) {
+		System.out.println("다시 입력하세요");
 	}
-	System.out.println("총합 :"+(scoKor+scoEng+scoMat));
-	System.out.println("평균 :"+(double)((scoKor+scoEng+scoMat)/3));
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	System.out.println("총점 :"+(scoKor+scoEng+scoMat));
+	System.out.println("평균 :"+(scoKor+scoEng+scoMat)/3);
 }
 }

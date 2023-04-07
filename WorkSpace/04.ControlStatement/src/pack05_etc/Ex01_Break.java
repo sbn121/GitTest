@@ -16,31 +16,15 @@ public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	int num = Integer.parseInt(sc.nextLine());
 	while(true) {
+		System.out.println("루프중");
 		if(num==-1) {
 			System.out.println("종료");
 			break;
 		}else if(num==1) {
 			System.out.println("1번");
-			break;
 		}
-	System.out.println("루프중");
 	}//while
 //	System.out.println("출력");
-	Scanner sc1 = new Scanner(System.in);
-	int i = Integer.parseInt(sc1.nextLine());
-	while(true) {
-		if(i>=0&&i%i==0) {
-			System.out.println("양수");
-			break;
-		}else if(i<0&&i%i==0){
-			System.out.println("음수");
-			break;
-		}
-		System.out.println("정수를 입력하세요");
-	}
-	
-	
-	
 	
 	
 	

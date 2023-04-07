@@ -12,7 +12,7 @@ public static void main(String[] args) {
 		if(i%2==0) {
 			continue;
 		}
-		j+=i;
+		j=i+j;
 	}
 	System.out.println(j);
 	
