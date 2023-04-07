@@ -1,0 +1,34 @@
+package pack06_game;
+
+import java.util.Scanner;
+
+public class Game02_1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a, b, c;
+		
+		while(true) {
+			a=Integer.parseInt(sc.nextLine());
+			if(a<0||a>100) {
+				System.out.println("0과 100사이의 수를 입력하세요");continue;
+			}else if(a<=60) {
+				System.out.println("E등급");
+			}else if(a<=70) {
+				System.out.println("D등급");
+			}else if(a<=80) {
+				System.out.println("C등급");
+			}else if(a<=90) {
+				System.out.println("B등급");
+			}else
+				System.out.println("A등급");
+			}
+		break;
+		}
+		
+		
+		
+		
+		
+		
+	}
+}
