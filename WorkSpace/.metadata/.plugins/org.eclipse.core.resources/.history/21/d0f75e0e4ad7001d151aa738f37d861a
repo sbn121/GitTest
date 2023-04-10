@@ -1,0 +1,24 @@
+package pack02_array;
+
+public class Ex02_Array {
+public static void main(String[] args) {
+	int[] scoreArray = new int[10];
+	for(int i=0;i<10;i++) {
+		scoreArray[i]=(i+1)*10;
+		System.out.println("scoreArray["+i+"] : "+scoreArray[i]);
+	}
+	int i1=0;
+	while(i1<10) {
+		scoreArray[i1]=(i1+1)*10;
+		System.out.println("scoreArray["+i1+"] : "+scoreArray[i1]);
+		i1++;
+	}
+	
+	
+	
+	
+	
+	
+	
+}
+}

@@ -36,6 +36,19 @@ public static void main(String[] args) {
 	
 	
 	
-	
+	Scanner sc = new Scanner(System.in);
+	int comNum = new Random().nextInt(100)+1;
+	int count = 0;
+	for(;;) {
+		count++;
+		int userNum = Integer.parseInt(sc.nextLine());
+		if(comNum>userNum) {
+			System.out.println("더 큰 수를 입력하세요");}
+		else if(comNum<userNum) {
+			System.out.println("더 작은 수를 입력하세요");}
+		else {
+			System.out.println("정답");break;}
+		}
+	System.out.println("시도 횟수는 "+count+"번 입니다");
 }
 }

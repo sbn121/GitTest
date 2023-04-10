@@ -1,0 +1,19 @@
+package pack02_array;
+
+import java.util.Scanner;
+
+public class Ex03_Array {
+public static void main(String[] args) {
+	//데이터타입[] 배열이름 = new 데이터타입[크기];
+	//데이더타입 >>내가 알고 있는 모든 것들
+	//> int 초기값 : 0 <-숫자형태의 변수타입은 전부 0
+	//> String 초기값 : null (참조형 변수들의 초기값)
+	String[] str = new String[10];
+//	System.out.println(str[0]);
+	String[] animals = {"강아지", "고양이", "비둘기"};
+	System.out.println(animals[0] +animals[1] +animals[2]);
+	
+	
+	
+}
+}
