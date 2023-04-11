@@ -31,6 +31,22 @@ public static void main(String[] args) {
 	for(int i=0;i<5;i++) {
 		System.out.println("scoreArray["+i+"] °ª : "+scoreArray[i]);
 	}
+	int sum=0;
+	for(int i=0;i<5;i++) {
+		scoreArray[i]=(i+1)*10;
+		sum+=scoreArray[i];
+		System.out.println(scoreArray[i]);
+	}
+	System.out.println(sum);
+	int sum1=0;
+	int i=0;
+	while(i<5) {
+		scoreArray[i]=(i+1)*10;
+		sum1+=scoreArray[i];
+		System.out.println(scoreArray[i]);
+		i++;
+	}
+	System.out.println(sum1);
 	
 	
 	
