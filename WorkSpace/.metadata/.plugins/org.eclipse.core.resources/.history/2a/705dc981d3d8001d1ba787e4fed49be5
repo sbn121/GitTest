@@ -1,0 +1,28 @@
+package pack03_array2;
+
+public class TestLast {
+public static void main(String[] args) {
+	//2차원 배열을 만듬
+	//2차원 배열의 크기와 타입은 자유롭게 하기
+	//2차원 배열에 구구단 2~9단의 답을 저장하고 2차원 배열을 통해 출력까지 해보기
+	int[][] array = new int[8][9];
+	for(int i=2;i<10;i++) {
+		for(int j=1;j<10;j++) {
+			array[i-2][j-1] = i*j;
+			System.out.print(array[i-2][j-1]+" ");
+		}
+		System.out.println();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}
