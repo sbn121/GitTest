@@ -1,0 +1,21 @@
+package pack02_trycatch;
+
+public class Ex01_TryCatch {
+public static void main(String[] args) {
+	//try {
+	//예외(오류)가 발생할 가능성이 있는 코드(코드 자체는 정상);
+	//a<-x(코드가 비정상)
+	//Integer.parseInt(sc.nextLine()); <-사용자의 입력을 숫자로 바꾸는 기능.
+//}catch(Exception e) {
+	//예외가 발생할 시 처리할 코드(대안코드)
+//}(선택)finally {
+	//무조건 한 번 실행되어야 하는 코드가 있다면 넣어줌.
+	//데이터베이스의 연결을 해제하거나, 세션을 끊는다.(큐넷)
+//}
+	//정상코드이지만 실행했을 때 오류가 발생하게 코딩해보기.
+	System.out.println(10/0S);
+	
+	
+	
+}
+}

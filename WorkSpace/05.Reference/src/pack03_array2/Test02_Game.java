@@ -31,7 +31,7 @@ public static void main(String[] args) {
 		int random = new Random().nextInt(level);   //<-0~2
 		
 		gameArray[random] = 1;                      //<-[1] [0] [0]
-		while(true) {
+		for(;;) {
 			System.out.println("1부터 " + gameArray.length +"까지의 값을 입력");
 			for(int i = 0;i<gameResults.length;i++) {
 				System.out.print(i+1+"["+gameResults[i] +"] ");

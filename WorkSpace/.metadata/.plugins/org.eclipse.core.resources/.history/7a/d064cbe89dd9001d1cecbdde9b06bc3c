@@ -1,0 +1,19 @@
+package pack02_trycatch;
+
+public class Ex03_TryCatchOrder {
+	public static void main(String[] args) {
+		int data1=10;
+		int data2=0;
+		try {
+			int result = data1/data2;//ArithmeticException
+		} catch (ArithmeticException e) {//연산오류 0으로 어떤 수 나누기하면 발생
+			System.out.println("data2의 변수(값:"+data2+")때문에 오류");
+		} catch (NullPointerException e) {
+		}
+		
+		
+		
+		
+		
+	}
+}
