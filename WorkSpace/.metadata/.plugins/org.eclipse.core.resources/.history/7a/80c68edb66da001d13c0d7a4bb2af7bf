@@ -1,0 +1,8 @@
+package pack02_field;
+
+public class Ex02_FieldMain {
+	public static void main(String[] args) {
+		Ex02_field e2f = new Ex02_field();
+		System.out.println(e2f.strField);
+	}
+}

@@ -1,0 +1,11 @@
+package pack02_field;
+
+public class Ex01_CarMain {//Main 붙었기 때문에 main메소드 만들기
+	public static void main(String[] args) {
+		//Ex01_Car라는 클래스를 변수처럼 만들어보기.(사용가능하게)
+		Ex01_Car myCar = new Ex01_Car();//인스턴스화:객체(클래스)를 메모리에 올려서 사용하게 만드는 것.
+		System.out.println("제조사:"+myCar.company);
+		
+		
+	}
+}

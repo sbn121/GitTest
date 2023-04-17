@@ -6,7 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="Scanner"/>
 		<list key="findhistory">
+			<item value="nextline"/>
+			<item value="nextLine"/>
 			<item value="random"/>
 		</list>
 		<list key="replacehistory">

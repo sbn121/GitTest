@@ -28,7 +28,7 @@ public class Test01_TryCatch {
 				result[i]="?";}
 		int random = new Random().nextInt(dif);
 		game[random]=1;
-		for(;;) {
+		while(true) {
 			try {
 			for(int i=0;i<result.length;i++) {
 				System.out.print((i+1)+"["+result[i]+"]");

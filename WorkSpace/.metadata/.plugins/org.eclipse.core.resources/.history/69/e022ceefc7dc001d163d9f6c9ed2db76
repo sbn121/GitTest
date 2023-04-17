@@ -1,0 +1,25 @@
+package pack01_base;
+
+public class Ex03_Computer {
+	//Ex03_Computer에 메소드를 구현해보기
+	//sum1이라는 메소드를 만듬
+	//해당하는 메소드는 숫자형을 묶어놓은 배열을 입력받아 배열의 총합을 구하는 메소드이다
+	
+	int sum1(int[] num) {
+		int sum=0;
+		for(int i=0;i<num.length;i++) {
+			sum+=num[i];
+		}
+		return sum;
+	}
+	
+	//많이 안 쓰는 형태의 메소드 파라메터
+	int sum2(int ... values) {
+		int sum =0;
+		for(int i=0;i<values.length;i++) {
+			sum+=i;
+		}
+		return 0;
+	}
+	
+}

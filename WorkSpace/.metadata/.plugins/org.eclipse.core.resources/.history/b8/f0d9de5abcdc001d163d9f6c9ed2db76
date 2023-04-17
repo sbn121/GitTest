@@ -1,0 +1,14 @@
+package pack01_base;
+
+public class Ex02_CalculatorMain {
+	public static void main(String[] args) {
+		//멤버 : 클래스를 인스턴스화 하고 '.' 찍으면 나오는 모든 것들
+		Ex02_Calculator ec = new Ex02_Calculator();
+		ec.powerOn(5);
+		ec.powerOff();
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,7 @@
+package pack01_class;
+//학생(물리적,추상적)을 자바코드로 표현한 것
+//기능x
+//속성x
+public class Ex01_Student {
+
+}

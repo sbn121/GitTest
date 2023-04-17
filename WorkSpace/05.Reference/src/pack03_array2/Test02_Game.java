@@ -21,9 +21,17 @@ public static void main(String[] args) {
 	// 사용자가 답을 입력함 . 4=> 정답                                    ↑
 		Scanner sc = new Scanner(System.in);
 		System.out.println("랜덤한 숫자 맞추기 게임");
-		System.out.println("난이도를 선택해주세요");
-		int level = Integer.parseInt(sc.nextLine());//<-오류가 나는 코드인지 알고있음
-		int[] gameArray = new int[level];           //<-[0] [0] [0]
+		int level = 0;
+		int[] gameArray = new int[0];
+		while(level<2) {
+			
+			try {
+				System.out.println("난이도를 선택해주세요");
+		level = Integer.parseInt(sc.nextLine());//<-오류가 나는 코드인지 알고있음
+		gameArray = new int[level];           //<-[0] [0] [0]
+			}catch (Exception e) {
+			}
+		}
 		String[] gameResults = new String[level];   //<-[null] [null] [null]
 		for(int i = 0;i<gameResults.length;i++) {
 			gameResults[i] = "?";
@@ -32,17 +40,22 @@ public static void main(String[] args) {
 		
 		gameArray[random] = 1;                      //<-[1] [0] [0]
 		for(;;) {
+			try {
 			System.out.println("1부터 " + gameArray.length +"까지의 값을 입력");
 			for(int i = 0;i<gameResults.length;i++) {
 				System.out.print(i+1+"["+gameResults[i] +"] ");
 			}
 			System.out.println();
+			
 			int userNum = Integer.parseInt(sc.nextLine())-1;
 			if(gameArray[userNum]==1) {
 				System.out.println("정답");break;
 			}else {
 				gameResults[userNum] = "X";
 				System.out.println("오답");
+			}
+			}catch (Exception e) {
+				System.out.println("입력 오류"+"1부터 " + gameArray.length +"까지의 값을 입력");
 			}
 		}
 	

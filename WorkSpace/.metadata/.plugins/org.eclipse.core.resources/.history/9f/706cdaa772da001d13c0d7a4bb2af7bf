@@ -1,0 +1,14 @@
+package pack03_constructor;
+
+public class Test01 {
+String 이름;
+String 아이디;
+String 패스워드;
+int 나이;
+public Test01(String 이름, String 아이디, String 패스워드) {
+	this.이름 = 이름;
+	this.아이디 = 아이디;
+	this.패스워드 = 패스워드;
+}
+
+}
