@@ -1,0 +1,10 @@
+package pack02_static;
+
+public class Ex02_CalculatorMain {
+	public static void main(String[] args) {
+		System.out.println(Ex02_Calculator.plus(1, 5));
+		System.out.println(Ex02_Calculator.minus(1, 5));
+		System.out.println(Ex02_Calculator.mul(1, 5));
+		System.out.println(Ex02_Calculator.div(1, 5));
+	}
+}

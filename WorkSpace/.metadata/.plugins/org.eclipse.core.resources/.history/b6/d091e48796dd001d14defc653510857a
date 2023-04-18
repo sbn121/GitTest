@@ -1,0 +1,29 @@
+package pack02_static;
+
+public class Ex03_String {
+	//String Class : 문자열을 조작하기 위한 기능을 담고 있는 클래스
+	//java.lang(패키지).String.class(.JAVA)
+	//String 역시 Class이기 때문에 멤버를 가지고 있다.
+	//다른사람(Java, Oracle)이 만든 클래스의 기능(메소드)활용해보기
+	//변수는 소괄호가x, 메소드는 소괄호o
+	public static void main(String[] args) {
+		String str1 = "apple"; 				//apple 문자열을 str1이라는 변수에 할당
+		String str2 = new String("APPLE");	//인스턴스화 과정을 거쳐서 str2라는 변수를 APPLE에 할당
+		
+		System.out.println("str1 : "+str1);
+		System.out.println("str2 : "+str2);
+		
+		//length()메소드 : 문자열의 길이를 알 수 있음
+		System.out.println("length() : "+str1.length());
+		
+		//toUpperCase(), toLowerCase()
+		//대문자로 변경, 소문자로 변경
+		System.out.println("toUpperCase() : " + str1.toUpperCase());
+		System.out.println("toLowerCase() : " + str2.toLowerCase());
+		
+		//subString() : 특정 문자 추출(index)
+		System.out.println("subString() : "+ str1.substring(2));
+		System.out.println("subString() : "+ str1.substring(1, 4));
+		
+	}
+}

@@ -1,0 +1,16 @@
+package pack02_static;
+
+import java.util.Scanner;
+
+public class Test01_MethodMain {
+	public static void main(String[] args) {
+		Test01_Method tm = new Test01_Method();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("아이디와 비밀번호를 차례대로 입력해주세요");
+		tm.login(sc.nextLine(), sc.nextLine());
+		
+		
+		
+		
+	}
+}

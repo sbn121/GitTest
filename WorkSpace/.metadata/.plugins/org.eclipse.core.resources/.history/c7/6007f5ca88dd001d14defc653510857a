@@ -1,0 +1,8 @@
+package pack01_base;
+
+public class Ex06_MethodMain {
+public static void main(String[] args) {
+	Ex06_Method em = new Ex06_Method();
+	em.v1();
+}
+}

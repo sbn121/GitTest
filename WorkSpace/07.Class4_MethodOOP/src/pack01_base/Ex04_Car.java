@@ -24,10 +24,8 @@ public class Ex04_Car {
 			System.out.println("gas가 있습니다.");
 			return true;
 		}
-//		return true;
+//		return true;	
 	}
-	
-	
 	
 	
 }

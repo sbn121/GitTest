@@ -1,0 +1,7 @@
+package pack01_base;
+
+public class Ex05_ConstMain {
+public static void main(String[] args) {
+	Ex05_Const ec = new Ex
+}
+}

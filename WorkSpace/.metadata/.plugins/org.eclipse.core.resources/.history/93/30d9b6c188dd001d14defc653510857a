@@ -1,0 +1,16 @@
+package pack01_base;
+
+public class Ex06_Method {
+	void v1() {
+		
+	}
+	void v2(int i) {
+		
+	}
+	String str1() {
+		return "";
+	}
+	String str2(String str) {
+		return "";
+	}
+}

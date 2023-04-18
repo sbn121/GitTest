@@ -1,0 +1,18 @@
+package pack01_base;
+
+public class Ex06_Method {
+	void v1() {
+		System.out.println("v1");
+	}
+	void v2(String data) {
+		System.out.println("v2"+data);
+	}
+	boolean isB1() {
+		System.out.println("isB1");
+		return true;
+	}
+	boolean isB2(int data) {
+		System.out.println("isB2");
+		return false;
+	}
+}
