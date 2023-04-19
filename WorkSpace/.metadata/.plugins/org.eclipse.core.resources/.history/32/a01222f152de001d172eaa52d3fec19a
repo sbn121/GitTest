@@ -1,0 +1,14 @@
+package pack03_oop1;
+
+public class ProductMain {
+	public static void main(String[] args) {
+		Product computer = new Product();
+		computer.num = 1234;
+		computer.name = "12345";
+		computer.display();
+		Product notebook = new Product();
+		notebook.num = 5678;
+		notebook.name = "67890";
+		notebook.display();
+	}
+}

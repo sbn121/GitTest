@@ -1,0 +1,10 @@
+package pack03_oop1;
+
+public class ProductMain {
+	public static void main(String[] args) {
+		Product p = new Product();
+//		p.num = 1234;
+//		p.name = "12345";
+		p.display();
+	}
+}

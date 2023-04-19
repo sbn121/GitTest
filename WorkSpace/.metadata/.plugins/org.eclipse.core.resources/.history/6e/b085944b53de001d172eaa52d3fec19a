@@ -1,0 +1,14 @@
+package pack03_oop1;
+
+public class ProductMain {
+	public static void main(String[] args) {
+		Product p1 = new Product();
+		p1.num = 1;
+		p1.name = "컴퓨터";
+		p1.display();
+		Product p2 = new Product();
+		p2.num = 2;
+		p2.name = "노트북";
+		p2.display();
+	}
+}

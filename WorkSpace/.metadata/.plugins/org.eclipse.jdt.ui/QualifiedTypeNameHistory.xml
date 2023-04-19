@@ -17,8 +17,23 @@
     <fullyQualifiedTypeName name="pack03_constructor.Ex01_Cons"/>
     <fullyQualifiedTypeName name="pack01_base.Ex01_Car"/>
     <fullyQualifiedTypeName name="pack01_base.Ex02_Calculator"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="pack01_base.Ex03_Computer"/>
     <fullyQualifiedTypeName name="pack01_base.Ex04_Car"/>
     <fullyQualifiedTypeName name="pack01_base.Ex03_ComputerMain"/>
+    <fullyQualifiedTypeName name="pack01_base.Ex06_Method"/>
+    <fullyQualifiedTypeName name="pack01_base.Ex07_OverLoading"/>
+    <fullyQualifiedTypeName name="java.awt.im.spi.InputMethod"/>
+    <fullyQualifiedTypeName name="pack02_static.Ex01_Static"/>
+    <fullyQualifiedTypeName name="pack02_static.Ex02_Calculator"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="pack01_base.Ex05_Const"/>
+    <fullyQualifiedTypeName name="pack02_static.Test01_MethodMain"/>
+    <fullyQualifiedTypeName name="pack02_static.Test01_Method"/>
+    <fullyQualifiedTypeName name="pack03_oop1.Product"/>
+    <fullyQualifiedTypeName name="pack03_oop1.ProductMain"/>
+    <fullyQualifiedTypeName name="pack03_oop1.ProductDAO"/>
+    <fullyQualifiedTypeName name="pack03_oop1.ProductDTO"/>
+    <fullyQualifiedTypeName name="pack03_oop1.StudentDAO"/>
+    <fullyQualifiedTypeName name="pack03_oop1.Student"/>
+    <fullyQualifiedTypeName name="pack03_oop1.StudentDTO"/>
 </qualifiedTypeNameHistroy>

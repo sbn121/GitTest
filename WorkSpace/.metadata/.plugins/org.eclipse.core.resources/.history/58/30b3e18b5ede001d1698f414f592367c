@@ -1,0 +1,7 @@
+package pack03_oop1;
+
+public class StudentDAO {
+	void display(StudentDTO dto) {
+		System.out.println(num);
+	}
+}

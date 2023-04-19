@@ -1,0 +1,24 @@
+package pack03_oop1;
+
+//Student Class : 학생의 성적정보를 관리할 수 있게 만든 설계도
+public class Student {
+	//멤버(필드) : 학생의 번호, 이름, 국어성적, 수학성적, 영어성적, 총점, 평균
+	
+	int num;
+	String name;
+	int korSco;
+	int matSco;
+	int engSco;
+	int sum = korSco+matSco+engSco;
+	double avg = (double)sum/3;
+	
+	public Student(int num, String name) {
+		this.num = num;
+		this.name = name;
+	}
+
+	void student() {
+		System.out.println("번호 : "+num+"이름 : "+name+"국어 : "+korSco+"수학 : "+matSco+"영어 : "+engSco+"총합 : "+sum+"평균 : "+avg);
+	}
+	
+}

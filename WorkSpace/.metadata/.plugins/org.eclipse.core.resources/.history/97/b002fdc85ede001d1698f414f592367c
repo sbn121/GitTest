@@ -1,0 +1,13 @@
+package pack03_oop1;
+
+public class StudentDAO {
+	void display(StudentDTO dto) {
+		System.out.println(dto.num);
+		System.out.println(dto.name);
+		System.out.println(dto.korSco);
+		System.out.println(dto.matSco);
+		System.out.println(dto.engSco);
+		System.out.println(dto.sum);
+		System.out.println(dto.avg);
+	}
+}
