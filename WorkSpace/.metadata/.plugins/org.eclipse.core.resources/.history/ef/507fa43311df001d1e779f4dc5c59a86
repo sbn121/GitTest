@@ -1,0 +1,9 @@
+package pack06_japangi;
+
+public class JapangiMain {
+	public static void main(String[] args) {
+		JapangiDTO dto = new JapangiDTO(1, "ÄÝ¶ó", 800, 8);
+		JapangiDAO dao = new JapangiDAO();
+		dao.money(dto);
+	}
+}

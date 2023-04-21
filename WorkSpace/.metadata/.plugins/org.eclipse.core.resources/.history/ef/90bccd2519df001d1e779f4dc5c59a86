@@ -1,0 +1,13 @@
+package pack06_japangi;
+
+public class JapangiMain {
+	public static void main(String[] args) {
+		JapangiDTO dto = new JapangiDTO(1, "콜라",  1000, 5);
+		JapangiDAO dao = new JapangiDAO();
+		System.out.println(dto.getName()+"의 금액을 입력하세요");
+		dao.inputCost();
+		dto.setCost(Integer.parseInt(dao.inputData().nextLine()));
+		
+		dao.money(dto);
+	}
+}

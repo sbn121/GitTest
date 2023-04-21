@@ -1,0 +1,7 @@
+package pack07_oop3;
+
+public class ProductMain {
+	public static void main(String[] args) {
+		ProductDTO dto = new ProductDTO(1, "ªÛ«∞", 1000, 5);
+	}
+}

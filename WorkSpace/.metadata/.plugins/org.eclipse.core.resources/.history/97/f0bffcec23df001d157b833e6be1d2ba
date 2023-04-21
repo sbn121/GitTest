@@ -1,0 +1,23 @@
+package pack06_japangi;
+
+import java.util.Scanner;
+
+public class JapangiDAO {
+	void display(JapangiDTO dto) {
+		System.out.print(dto.getNum()+". ");
+		System.out.print(dto.getName()+" ");
+		System.out.print("금액 : "+dto.getPrice()+" ");
+		System.out.print("수량 : "+dto.getCount()+" ");
+	}
+	void userMoneyCount(JapangiDTO userMoney) {
+		if(dto.getUserMoney()%10==0) {
+			System.out.println("입력 오류");
+		}else {
+			System.out.println("금액 : "+dto.getPrice());
+		}
+	} 
+	
+	Scanner inputData() {
+		return new Scanner(System.in);
+	}
+}

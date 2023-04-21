@@ -1,0 +1,199 @@
+package pack06_japangi;
+
+import java.util.Scanner;
+
+
+public class JapangiDAO {
+	void display(JapangiDTO[] menu) {
+		for(int i=0;i<menu.length;i++) {
+			System.out.print(menu[i].getNum()+" ");
+			System.out.print(menu[i].getName()+" ");
+			System.out.print(menu[i].getPrice()+" ");
+			System.out.println(menu[i].getCount());
+		}
+	}
+	
+	Scanner sc = new Scanner(System.in);
+	int select;
+		int selectMoney;
+		int space;
+		int countMinus;
+		boolean isExit;
+		
+		
+	public int inputCoin(JapangiDTO dto) {
+		while(true) {
+			System.out.println("돈을 넣어주세요.");
+			try {
+				dto.setUserMoney(Integer.parseInt(sc.nextLine()));
+				if(dto.getUserMoney()<=0 || dto.getUserMoney() % 10 != 0) {
+					System.out.println("돈을 다시 넣어주세요.");
+				}else {
+					System.out.println(dto.getUserMoney() + "원을 넣었습니다.");
+					break;
+				}
+			} catch (Exception e) {
+				System.out.println("입력 오류, 돈을 넣어주세요.");
+			}
+		}
+		return dto.getUserMoney();
+	}
+	public void drink(JapangiDTO dto, JapangiDTO menu[]) {
+		while(true) {
+		System.out.println("음료를 선택하세요");
+		System.out.println("현재잔액: "+dto.getUserMoney());
+		display(menu);
+		select= Integer.parseInt(sc.nextLine());
+			if(select<=menu.length&&select>=1) { 
+				break;
+			}else {
+		System.out.println("입력오류 1~"+menu.length + "를 입력하세요");
+	}
+		}	
+				while(dto.getUserMoney()<menu[select-1].getPrice()) {
+					try {
+			System.out.println("잔액이 부족합니다(현재 잔액: "+dto.getUserMoney()+")");
+			System.out.println("돈을 더 넣으시겠습니까?");
+			System.out.println("1.O 2.X");
+			selectMoney=Integer.parseInt(sc.nextLine());
+			if(selectMoney==1) {
+				System.out.println("금액을 넣어주세요");
+				dto.setInputMoney(Integer.parseInt(sc.nextLine()));
+//				space += dto.getInputMoney();
+//				dto.setUserMoney(space);
+				System.out.println("현재잔액: "+dto.getUserMoney()+"원");
+				System.out.println("다시 골라주세요");
+				display(menu);
+				select= Integer.parseInt(sc.nextLine());
+				
+			}
+			else if(selectMoney==2) {
+				System.out.println("잔돈을 반환합니다");
+				System.out.println("잔돈: "+ dto.getUserMoney());
+				break;
+			}
+			else {
+				System.out.println("1 또는 2 를 눌러주세요");
+			}
+			}
+				catch (Exception e) {
+					System.out.println("1 또는 2 를 눌러주세요");
+				}
+					}
+		System.out.println(menu[select-1].getName()+"을 선택하셨습니다.");
+	
+		
+		
+	}
+		
+		public void exit(JapangiDTO dto, JapangiDTO menu[]) {
+			if(menu[select-1].getCount()!=0) {
+			isExit = true;
+		}
+		
+		if (isExit) {
+			menu[select-1].setCount(menu[select-1].getCount()-1);
+		}else {
+			while (menu[select-1].getCount() == 0) {
+				System.out.println("재고가 떨어졌어요");
+				System.out.println(menu[select - 1].getName() + " 말고 다른거 고르세요");
+			}
+
+			System.out.println(menu[select - 1].getName() + "가 나왔어요!");
+			dto.setInputMoney(dto.getInputMoney()-menu[select-1].getPrice());
+			System.out.println("잔돈 : "+dto.getInputMoney());
+		}
+		}
+		
+		
+	 
+}
+
+	
+//	public void drink(JapangiDTO menu[], JapangiDTO dto) {
+//		
+//		while(true) {
+//			System.out.println("음료를 선택하세요");
+//			System.out.println("현재잔액: "+dto.getUserMoney());
+//			display(menu);
+//			try {	
+//			select= Integer.parseInt(sc.nextLine());
+//				if(select<=menu.length&&select>=1) {
+//					
+//					while(dto.getUserMoney()<menu[select-1].getPrice()) {
+//				System.out.println("잔액이 부족합니다(현재 잔액: "+dto.getUserMoney()+")");
+//				System.out.println("돈을 더 넣으시겠습니까?");
+//				System.out.println("1.O 2.X");
+//				selectMoney=Integer.parseInt(sc.nextLine());
+//				if(selectMoney==1) {
+//					System.out.println("금액을 넣어주세요");
+//					dto.setInputMoney(Integer.parseInt(sc.nextLine()));
+////					space += dto.getInputMoney();
+////					dto.setUserMoney(space);
+//					System.out.println("현재잔액: "+dto.getUserMoney()+"원");
+//					System.out.println("다시 골라주세요");
+//					display(menu);
+//					select= Integer.parseInt(sc.nextLine());
+//					
+//				}
+//				else if(selectMoney==2) {
+//					System.out.println("잔돈을 반환합니다");
+//					System.out.println("잔돈: "+ dto.getUserMoney());
+//					break;
+//				}
+//				else {
+//					System.out.println("1 또는 2 를 눌러주세요");
+//				}
+//				}
+//			System.out.println(menu[select-1].getName()+"을 선택하셨습니다.");
+//			
+//			if(menu[select-1].getCount()!=0) {
+//				isExit = true;
+//			}
+//			
+//			if (isExit) {
+//				menu[select-1].setCount(menu[select-1].getCount()-1);
+//			}else {
+//				while (menu[select-1].getCount() == 0) {
+//					System.out.println("재고가 떨어졌어요");
+//					System.out.println(menu[select - 1].getName() + " 말고 다른거 고르세요");
+//				}
+//
+//				System.out.println(menu[select - 1].getName() + "가 나왔어요!");
+//				dto.setInputMoney(dto.getInputMoney()-menu[select-1].getPrice());
+//				System.out.println("잔돈 : "+dto.getInputMoney());
+//			}
+//				}break;
+//			}catch (Exception e) {
+//				System.out.println("1~"+menu.length+"숫자를 입력해주세요");
+//			}
+//		
+//				
+//
+//		}
+//
+//		
+//		
+//
+//	} 
+//		}	
+//			
+//	
+//
+//	
+//	
+//	
+//
+//	
+//	
+////	while(menu[select-1].getCount()==-1) {
+////				System.out.println("재고가 떨어졌어요");
+////				System.out.println(menu[select-1].getName() + " 말고 다른거 고르세요");
+////				menu[select-1].getCount()=menu[select-1].getCount()+1;
+////				select=Integer.parseInt(sc.nextLine());
+////				drinkArr[select-1].count = drinkArr[select-1].count-1;
+////	}
+//	
+	
+
+

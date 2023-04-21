@@ -1,7 +1,7 @@
 package pack05_public_private;
 
-import pack03_oop1.StudentDAO;
-import pack03_oop1.StudentDTO;
+import pack04_oop2.StudentDAO;
+import pack04_oop2.StudentDTO;
 
 public class Test {
 	public static void main(String[] args) {

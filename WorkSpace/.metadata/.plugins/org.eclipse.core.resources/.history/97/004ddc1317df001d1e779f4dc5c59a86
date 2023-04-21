@@ -1,0 +1,15 @@
+package pack07_oop3;
+
+public class ProductMain {
+	public static void main(String[] args) {
+		ProductDTO dto = new ProductDTO(1, "컴퓨터", 1000, 5);
+		ProductDTO dto2 = new ProductDTO(1, "노트북", 2000, 4);
+//		System.out.println(dto.getCnt());//private 접근제한자로 변수의 바로 접근을 막아놓음
+		ProductDAO dao = new ProductDAO();
+		dao.display(dto);
+		
+		
+		
+		
+	}
+}

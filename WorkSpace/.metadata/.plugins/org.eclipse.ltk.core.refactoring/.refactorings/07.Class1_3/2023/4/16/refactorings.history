@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;pack06_japangi&apos; to &apos;07.Class4_MethodOOP/src&apos;&#x0D;&#x0A;- Original project: &apos;07.Class1_3&apos;&#x0D;&#x0A;- Destination element: &apos;07.Class4_MethodOOP/src&apos;&#x0D;&#x0A;- Original element: &apos;07.Class1_3/src/pack06_japangi&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=07.Class4_MethodOOP/src" element1="/src&lt;pack06_japangi" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1681951363892" version="1.0"/>
+</session>
