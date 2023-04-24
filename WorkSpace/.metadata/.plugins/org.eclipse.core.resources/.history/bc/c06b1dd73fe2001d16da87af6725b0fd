@@ -1,0 +1,32 @@
+package test01_oop1;
+
+import java.util.Scanner;
+
+public class JapangiMain {
+	public static void main(String[] args) {
+		//반복을 계속해서 하다가 별도의 키를 입력받아 종료돼야함.
+		//JapangiDTO dto = new JapangiDTO("콜라", 800, 7);
+		JapangiDAO dao = new JapangiDAO();
+		JapangiDTO[] drinkArr = dao.initDrink();
+		
+		System.out.println("금액을 입력해주세요");
+		dao.inputMoney();
+		Scanner sc= new Scanner(System.in);
+		while(true) {
+			dao.display(drinkArr);
+			String inputData = sc.nextLine();
+			if(inputData.equals("exit")) {
+				System.out.println("종료되었습니다.");
+				break;
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

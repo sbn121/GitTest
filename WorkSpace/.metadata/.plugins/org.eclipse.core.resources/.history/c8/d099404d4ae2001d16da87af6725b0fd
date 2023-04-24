@@ -1,0 +1,17 @@
+package test01_oop1;
+
+import java.util.Scanner;
+
+public class AdminDAO {
+	public void adminLogin() {
+		Scanner sc = new Scanner(System.in);
+		String id = sc.nextLine();
+		String pw = sc.nextLine();
+		if(id.equals("master")&&pw.equals("admin")) {
+			System.out.println("로그인 되었습니다");
+			System.out.println("1. 음료 추가, 2. 음료 수정 3. 음료 삭제");
+		}else {
+			System.out.println("아이디 또는 패스워드를 확인해주세요.");
+		}
+	}
+}

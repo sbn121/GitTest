@@ -1,0 +1,32 @@
+package test02_oop2;
+
+public class LottoMain {
+	public static void main(String[] args) {
+		LottoDAO dao = new LottoDAO();
+		
+		
+		while(true) {
+			System.out.println("구매할 로또의 개수를 입력해주세요.");
+			dao.inputNum();
+			if(dao.inputNum()>0) {
+				System.out.println(dao.inputNum()+"개를 구매했습니다.");
+			}else {
+				System.out.println("입력 실패, 자연수를 입력해주세요.");
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

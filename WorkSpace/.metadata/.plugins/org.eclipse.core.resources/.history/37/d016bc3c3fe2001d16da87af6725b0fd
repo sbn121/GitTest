@@ -1,0 +1,43 @@
+package test01_oop1;
+
+import java.util.Scanner;
+
+public class JapangiDAO {
+	//음료 목록을 가진 DrinkDTO[] 배열을 초기화하는 메소드를 작성해보기.
+	public JapangiDTO[] initDrink() {
+		JapangiDTO[] drinkArr = new JapangiDTO[3];
+		drinkArr[0] = new JapangiDTO("콜라", 800, 7);
+		drinkArr[1] = new JapangiDTO("사이다", 1000, 5);
+		drinkArr[2] = new JapangiDTO("환타", 900, 1);
+		
+		return drinkArr;
+	}
+	
+	public void display(JapangiDTO[] drinkArr) {
+		System.out.println("음료명\t가격\t개수");
+		for(int i=0; i<drinkArr.length; i++) {
+			System.out.print((i+1)+"."+drinkArr[i].getName()+"\t");
+			System.out.print(drinkArr[i].getPrice()+"\t");
+			System.out.print(drinkArr[i].getCnt());
+			System.out.println();
+		}
+	}
+	
+	//사용자의 금액을 입력받기 위한 메소드
+	//1. 사용자는 숫자 외에 값을 입력할 수 있음 => 오류
+	//2. 금액으로 인정되는 단위만 입력해야함. 10, 50, 100, 500, 1000
+	public void inputMoney() {
+		Scanner sc = new Scanner(System.in);
+		try {
+			
+		int money = Integer.parseInt(sc.nextLine());
+		}catch (Exception e) {
+			System.out.println("숫자 값만 입력해주세요.");
+		}
+	}
+	
+	
+	
+	
+	
+}

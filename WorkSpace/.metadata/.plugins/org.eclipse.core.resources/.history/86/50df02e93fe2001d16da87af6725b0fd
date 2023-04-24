@@ -1,0 +1,33 @@
+package test01_oop1;
+
+import java.util.Scanner;
+
+public class JapangiMain {
+	public static void main(String[] args) {
+		//반복을 계속해서 하다가 별도의 키를 입력받아 종료돼야함.
+		//JapangiDTO dto = new JapangiDTO("콜라", 800, 7);
+		JapangiDAO dao = new JapangiDAO();
+		JapangiDTO[] drinkArr = dao.initDrink();
+		
+		
+		while(true) {
+			dao.display(drinkArr);
+			int inputMenu = dao.inputInt();
+			System.out.println("1. 음료주문, -1. 종료");
+			if(inputMenu==1) {
+				System.out.println("음료주문메뉴선택됨");
+			}else if(inputMenu == -1) {
+				System.out.println("종료되었습니다.");
+				break;
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

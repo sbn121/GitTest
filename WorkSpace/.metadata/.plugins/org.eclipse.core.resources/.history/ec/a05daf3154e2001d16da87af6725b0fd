@@ -1,0 +1,13 @@
+package test02_oop2;
+
+public class LottoMain {
+	public static void main(String[] args) {
+		LottoDAO dao = new LottoDAO();
+		
+		
+		while(true) {
+			System.out.println("구매할 로또의 개수를 입력해주세요.");
+			dao.inputNum();
+		}
+	}
+}

@@ -37,7 +37,7 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="pack07_oop3.ProductDTO"/>
     <fullyQualifiedTypeName name="pack07_oop3.ProductDAO"/>
-    <fullyQualifiedTypeName name="pack06_japangi.JapangiDAO"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="pack06_japangi.JapangiDTO"/>
+    <fullyQualifiedTypeName name="pack06_japangi.JapangiDAO"/>
 </qualifiedTypeNameHistroy>
