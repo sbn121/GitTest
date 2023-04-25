@@ -9,7 +9,6 @@ public class JapangiMain {
 		JapangiDAO dao = new JapangiDAO();
 //		JapangiDTO[] drinkArr = dao.initDrink();
 		
-		
 		while(true) {
 			System.out.println("0. 관리자 모드, 1. 음료주문, -1. 종료");
 			int inputMenu = dao.inputInt();

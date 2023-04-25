@@ -1,0 +1,10 @@
+package pack05_abstrac;
+
+public class Dog extends Animal{
+
+	@Override
+	public void sound() {
+		System.out.println("碍酒瘤啊 家府辰促. 港港!");
+	}
+
+}

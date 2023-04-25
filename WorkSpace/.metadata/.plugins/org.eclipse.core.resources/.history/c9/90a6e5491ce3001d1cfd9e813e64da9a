@@ -1,0 +1,12 @@
+package pack05_abstrac;
+
+//고양이 : 동물, 동물의 (기본적)특성을 상속받아 구현해야 될 자식클래스
+public class Cat extends Animal {
+
+	@Override
+	public void sound() {//추상 메소드에서 abstract로 지정해놓은 구조를 가진 메소드는 반드시 자식객체가 
+						 //재정의해서 구현해야한다.
+		System.out.println("고양이가 소리낸다. 야옹");
+	}
+
+}

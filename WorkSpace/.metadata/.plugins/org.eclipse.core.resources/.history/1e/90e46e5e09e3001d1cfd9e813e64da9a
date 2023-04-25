@@ -1,0 +1,9 @@
+package pack01.extend;
+
+public class ExamMain {
+	public static void main(String[] args) {
+		ParentClass pc = new ParentClass();
+		System.out.println(pc.parent_field);
+		pc.parentMethod();
+	}
+}

@@ -8,11 +8,12 @@ public class AdminDAO {
 		int count =0;
 		Scanner sc = new Scanner(System.in);
 		while(true) {
-			count++;
-			if(count==4) {
+			
+			if(count==3) {
 				System.out.println("시도횟수 3회를 초과하여 메인메뉴로 이동합니다.");
 				return false;
 			}
+			count++;
 		String id = sc.nextLine();
 		String pw = sc.nextLine();
 		if(id.equals("master")&&pw.equals("admin")) {

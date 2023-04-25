@@ -1,0 +1,30 @@
+package pack04.extend;
+
+public class CellPhone {
+	// 1세대 폰 : 전원을 켜고 끄는 기능과, 통화기능이 있는 휴대폰
+	String model;
+	String color;
+	
+	private void changeFolder() {
+		System.out.println("1세대 폰의 모델 특성상 화면이 돌아가는 기능입니다.");
+	}//private->상속x
+	
+	public void powerOn() {
+		System.out.println("전원을 켭니다.");
+	}
+	public void powerOff() {
+		System.out.println("전원을 끕니다.");
+	}
+	public void bell() {
+		System.out.println("벨이 울립니다.");
+	}
+	public void sendVoice(String input) {
+		System.out.println("나 : "+input);
+	}
+	public void receiveVoice(String input) {
+		System.out.println("상대방 : "+input);
+	}
+	public void hangUP() {
+		System.out.println("전화를 끊습니다.");
+	}
+}

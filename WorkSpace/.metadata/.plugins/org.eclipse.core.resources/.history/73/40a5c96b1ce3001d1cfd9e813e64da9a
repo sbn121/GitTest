@@ -1,0 +1,8 @@
+package pack05_abstrac;
+
+public class ExamMain {
+	public static void main(String[] args) {
+		Cat cat = new Cat();
+		cat.sound();
+	}
+}

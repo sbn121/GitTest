@@ -1,0 +1,13 @@
+package pack04.extend;
+
+public class ExamMain {
+	public static void main(String[] args) {
+		DmbPhone dmbP = new DmbPhone(1, "red", "apple");
+		dmbP.powerOn();
+		dmbP.bell();
+//		dmbP.
+		
+		
+		
+	}
+}
