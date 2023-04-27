@@ -6,13 +6,17 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Scanner"/>
+		<item key="selection" value="p2dto"/>
 		<list key="findhistory">
+			<item value="p1dto"/>
+			<item value="Mysql"/>
 			<item value="nextline"/>
 			<item value="nextLine"/>
 			<item value="random"/>
 		</list>
 		<list key="replacehistory">
+			<item value="p2dto"/>
+			<item value="Oracle"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

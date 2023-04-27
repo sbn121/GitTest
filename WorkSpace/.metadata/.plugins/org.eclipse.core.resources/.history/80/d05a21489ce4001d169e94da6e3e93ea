@@ -1,0 +1,12 @@
+package pack02.inter;
+
+public class RemoteMain {
+	public static void main(String[] args) {
+		//RemoteControl == 인터페이스(방법만 써놓은 것)
+		//Audio ↑ 방법을 상속받아 실제 메소드를 구현해놓은 곳
+		Audio audio = new Audio();
+		audio.turnOn();
+		audio.turnOff();
+		audio.setVolume(50);//인터페이스 부분을 이용해서 audio의 최소 볼륨과 최대 볼륨을 기입해주면 좋음
+	}
+}

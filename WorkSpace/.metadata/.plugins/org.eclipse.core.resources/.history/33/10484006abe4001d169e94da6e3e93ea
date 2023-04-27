@@ -1,0 +1,22 @@
+package pack;
+
+public class Phone1DAO {
+	boolean turnOn() {
+		System.out.println("전원을 켰습니다");
+			return true;
+		}
+		
+	boolean turnOff(Phone1DTO dto) {
+			System.out.println("전원이 꺼졋습니다");
+			return dto.isState();
+		}
+	boolean callOn() {
+		System.out.println("전화를 받았습니다.");
+		return true;
+	}
+	boolean callOff() {
+		System.out.println("전화를 끊었습니다..");
+		return false;
+	}
+	
+}

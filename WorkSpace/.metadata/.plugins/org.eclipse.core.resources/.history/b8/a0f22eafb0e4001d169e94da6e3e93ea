@@ -1,0 +1,26 @@
+package pack;
+
+import java.util.Scanner;
+
+public class Phone1 {
+	public static void main(String[] args) {
+		Phone1DAO dao= new Phone1DAO();
+		Phone1DTO p1dto= new Phone1DTO("검정", "애플", "꺼짐");
+		
+		System.out.println("색깔:"+p1dto.getColor());
+		System.out.println("모델명:"+p1dto.getModel());
+		System.out.println("상태 : "+p1dto.getState());
+		
+		while(true) {
+			System.out.println("전원을 키시려면 1번을 입력해주세요.");
+			int inputMenu = dao.inputNum();
+			if(inputMenu==1) {
+				dao.turnOn(p1dto);
+			}else {
+				System.out.println("전원이 꺼진 상태로 유지됩니다.");
+			}
+		}
+
+		
+	}
+}

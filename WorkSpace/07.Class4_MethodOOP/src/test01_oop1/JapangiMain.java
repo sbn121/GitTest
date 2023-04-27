@@ -1,7 +1,5 @@
 package test01_oop1;
 
-import java.util.Scanner;
-
 public class JapangiMain {
 	public static void main(String[] args) {
 		//반복을 계속해서 하다가 별도의 키를 입력받아 종료돼야함.
@@ -47,13 +45,6 @@ public class JapangiMain {
 				break;
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
 		
 	}
 }

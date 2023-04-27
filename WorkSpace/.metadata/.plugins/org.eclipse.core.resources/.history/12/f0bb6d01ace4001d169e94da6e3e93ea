@@ -1,0 +1,10 @@
+package pack;
+
+public class Phone1DAO {
+	
+	public void turnOn(Phone1DTO dto) {
+		System.out.println("전원이 켜졌습니다.");
+		dto.setState(dto.getState("켜짐"));
+	}
+	
+}

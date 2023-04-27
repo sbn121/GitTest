@@ -1,0 +1,24 @@
+package pack;
+
+public class Phone1 {
+	public static void main(String[] args) {
+		Phone1DAO dao= new Phone1DAO();
+		Phone1DTO p1dto= new Phone1DTO("검정", "애플", "꺼짐");
+		
+		System.out.println("색깔:"+p1dto.getColor());
+		System.out.println("모델명:"+p1dto.getModel());
+		System.out.println("상태 : "+p1dto.getState());
+		
+		dao.turnOn(p1dto);
+		if(p1dto.getState().equals("켜짐")) {
+				dao.callOn(p1dto);
+					if(p1dto.getState().equals("전화중")) {
+						dao.callOff(p1dto);
+					}
+		}else {
+			System.out.println("전원이 꺼져있어 전화 받기가 불가합니다.");
+		}
+
+		
+	}
+}
