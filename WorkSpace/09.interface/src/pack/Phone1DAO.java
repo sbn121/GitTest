@@ -34,9 +34,13 @@ public class Phone1DAO {
 		dto.setState("ÄÑÁü");
 	}
 	
-	public void send(Phone1DAO dto) {
+	public void send(Phone1DTO dto) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println(sc.nextLine());
+	}
+	
+	public void receive(Phone1DTO dto) {
+		System.out.println("¾È³ç");
 	}
 	
 	

@@ -36,7 +36,7 @@ public class Phone1 {
 				}else if(inputMenu==3) {
 					if(p1dto.getState().equals("전화중")) {
 						System.out.println("전송할 말을 입력해주세요");
-						dao.send(dao);
+						dao.send(p1dto);
 					}else {
 						System.out.println("전화 중이 아닙니다. 음성 전송 및 수신이 불가능합니다.");
 					}

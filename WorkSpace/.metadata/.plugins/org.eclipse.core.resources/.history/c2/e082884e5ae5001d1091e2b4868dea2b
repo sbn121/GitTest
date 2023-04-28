@@ -1,0 +1,16 @@
+package pack;
+
+public class Phone2DAO extends Phone1DAO{
+	
+	public void dmbOn(Phone2DTO dto) {
+		System.out.println("DMB방송을 켭니다. 현재채널 : "+dto.getChannel());
+		dto.setState("DMB 시청중");
+	}
+	
+	public void dmbChange(Phone2DTO dto, String channel) {
+		System.out.println("DMB방송의 채널을 변경합니다. 현재채널 : "+channel);
+		dto.setChannel(channel);
+	}
+
+	 
+}

@@ -1,0 +1,24 @@
+package pack01.nasted;
+
+
+public class A {
+	int aField = 10; //인스턴스 멤버
+	// 인스턴스화 과정에서 사용되는 생성자 메소드는 별도로 구현하지않으면 A(){}로 제공되고 있다.(JVM 무시)
+	public A(int a) {
+		
+	}
+	
+	// ※내가 알고 있는 모든 것들은 필드(멤버)가 될 수 있다.※
+	// B가 가지고 있는 변수 bField와, methodB를 Main.java(main 메소드)에서 사용해보기
+	public class B{	
+		public B() {System.out.println("B객체 생성됨");}
+		int bField;
+		
+		void methodB() {
+			System.out.println("메소드");
+		}
+	}
+	
+	
+	B b = new B();
+}

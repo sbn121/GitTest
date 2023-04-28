@@ -1,0 +1,68 @@
+package pack;
+
+public class Phone2 extends Phone1 {
+	public static void main(String[] args) {
+		Phone2DAO dao= new Phone2DAO();
+		Phone2DTO p2dto = new Phone2DTO("검정", "애플", "꺼짐", "정보없음");
+		
+		System.out.println("색깔:"+p2dto.getColor());
+		System.out.println("모델명:"+p2dto.getModel());
+		System.out.println("상태 : "+p2dto.getState());
+		System.out.println("채널 : "+p2dto.getChannel());
+		
+		
+		System.out.println("전원을 키시려면 1번을 입력해주세요. 1을 제외한 모든 수 입력 시 꺼진 상태 유지");
+			
+			int inputMenu = dao.inputNum();
+			while(true) {
+			if(inputMenu==1) {
+				dao.turnOn(p2dto);
+				while(p2dto.getState().equals("켜짐")||p2dto.getState().equals("전화중")) {
+				System.out.println("1. 전화 받기 2. DMB방송 키기 3. 전원 끄기");
+				inputMenu = dao.inputNum();
+				if(inputMenu==1) {
+					if(p2dto.getState().equals("켜짐")) {
+						dao.callOn(p2dto);
+						while(p2dto.getState().equals("전화중")) {
+						System.out.println("1. 전화 끊기 2. 음성 전송하기 3. 음성 수신하기");
+						inputMenu =dao.inputNum();
+							if(inputMenu==1) {
+								dao.callOff(p2dto);
+							}else if(inputMenu==2) {
+								System.out.println("보낼 말 : ");
+								dao.send(p2dto);
+							}else if(inputMenu==3) {
+								dao.receive(p2dto);
+							}else {
+								System.out.println("입력 오류 1~4사이의 수를 입력해주세요");
+							}
+						}
+					}else {
+						System.out.println("전원이 꺼져있어 전화 받기가 불가합니다.");
+					}
+				}else if(inputMenu==2) {
+					if(p2dto.getState().equals("전화중")) {
+						dao.callOff(p2dto);
+					}else {
+						System.out.println("전화 중이 아닙니다. 전화를 끊을 수 없습니다.");
+					}
+				}else if(inputMenu==3) {
+					dao.turnOff(p2dto);
+				}else {
+					System.out.println("입력 오류 1~4사이의 수를 입력해주세요");
+				}
+				}
+			}else {
+				System.out.println("전원이 꺼진 상태로 유지됩니다.");
+				break;
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+}

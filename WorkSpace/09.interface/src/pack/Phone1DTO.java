@@ -9,7 +9,6 @@ public class Phone1DTO {
 	
 	
 	public Phone1DTO(String color, String model, String state) {
-		super();
 		this.color = color;
 		this.model = model;
 		this.state = state;
@@ -29,15 +28,9 @@ public class Phone1DTO {
 	public void setModel(String model) {
 		this.model = model;
 	}
-
-
-
 	public String getState() {
 		return state;
 	}
-
-
-
 	public void setState(String state) {
 		this.state = state;
 	}
