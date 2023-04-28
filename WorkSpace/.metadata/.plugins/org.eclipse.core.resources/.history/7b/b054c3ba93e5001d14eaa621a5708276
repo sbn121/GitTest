@@ -1,0 +1,18 @@
+package pack;
+
+public class Phone3DAO extends Phone2DAO {
+	public void internetOn(Phone3DTO dto) {
+		System.out.println("인터넷 사용을 시작합니다.");
+		dto.setState("인터넷 켜짐");
+	}
+	public void internetOff(Phone3DTO dto) {
+		System.out.println("인터넷 사용을 종료합니다.");
+		dto.setState("인터넷 꺼짐");
+	}
+	public void webtoonOn(Phone3DTO dto) {
+		System.out.println("웹툰 앱을 실행합니다.");
+	}
+	public void webtoonOff(Phone3DTO dto) {
+		System.out.println("웹툰 앱을 종료합니다.");
+	}
+}

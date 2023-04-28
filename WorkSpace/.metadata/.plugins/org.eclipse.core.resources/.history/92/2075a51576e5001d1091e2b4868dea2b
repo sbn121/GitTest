@@ -2,16 +2,8 @@ package pack;
 
 public class Phone2DAO extends Phone1DAO{
 	
-	final int MAXCHANNEL = 300;
+	final int MAXCHANNEL = 100;
 	final int MINCHANNEL = 0;
-	
-	@Override
-	public void display(Phone1DTO dto) {
-		System.out.print("색깔:"+dto.getColor()+"\t");
-		System.out.print("모델명:"+dto.getModel()+"\t");
-		System.out.print("상태 : "+dto.getState()+"\t");
-		System.out.println("채널 : "+((Phone2DTO) dto).getChannel());
-	}
 	
 	public void dmbOn(Phone2DTO dto) {
 		System.out.println("DMB방송을 켭니다. 현재채널 : "+dto.getChannel());

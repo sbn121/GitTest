@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="pack01_base.Ex03_Computer"/>
-    <fullyQualifiedTypeName name="pack01_base.Ex04_Car"/>
-    <fullyQualifiedTypeName name="pack01_base.Ex03_ComputerMain"/>
-    <fullyQualifiedTypeName name="pack01_base.Ex06_Method"/>
-    <fullyQualifiedTypeName name="pack01_base.Ex07_OverLoading"/>
-    <fullyQualifiedTypeName name="java.awt.im.spi.InputMethod"/>
-    <fullyQualifiedTypeName name="pack02_static.Ex01_Static"/>
-    <fullyQualifiedTypeName name="pack02_static.Ex02_Calculator"/>
-    <fullyQualifiedTypeName name="pack01_base.Ex05_Const"/>
-    <fullyQualifiedTypeName name="pack02_static.Test01_MethodMain"/>
-    <fullyQualifiedTypeName name="pack02_static.Test01_Method"/>
     <fullyQualifiedTypeName name="pack03_oop1.Product"/>
     <fullyQualifiedTypeName name="pack03_oop1.ProductMain"/>
     <fullyQualifiedTypeName name="pack03_oop1.ProductDAO"/>
@@ -59,5 +48,16 @@
     <fullyQualifiedTypeName name="pack.Phone1DAO"/>
     <fullyQualifiedTypeName name="pack.Phone1DTO"/>
     <fullyQualifiedTypeName name="pack.Phone1"/>
+    <fullyQualifiedTypeName name="pack.Phone2DAO"/>
+    <fullyQualifiedTypeName name="pack01.nasted.Main"/>
+    <fullyQualifiedTypeName name="pack01.nasted.A.B"/>
+    <fullyQualifiedTypeName name="D"/>
+    <fullyQualifiedTypeName name="pack01.nasted.A.C"/>
+    <fullyQualifiedTypeName name="pack01.nasted.A.AA"/>
+    <fullyQualifiedTypeName name="pack01.nasted.A"/>
+    <fullyQualifiedTypeName name="pack01.nasted.A.AA.AAB"/>
+    <fullyQualifiedTypeName name="pack01.nasted.A.AA.BB"/>
+    <fullyQualifiedTypeName name="pack01.nasted.A.AA.BB.CC"/>
+    <fullyQualifiedTypeName name="pack01.nasted.A.AA.BB.CC.DD"/>
     <fullyQualifiedTypeName name="pack.Phone2DTO"/>
 </qualifiedTypeNameHistroy>

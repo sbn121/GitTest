@@ -7,7 +7,7 @@ public class Phone1DAO {
 	public void display(Phone1DTO dto) {
 		System.out.print("색깔:"+dto.getColor()+"\t");
 		System.out.print("모델명:"+dto.getModel()+"\t");
-		System.out.println("상태 : "+dto.getState()+"\t");
+		System.out.print("상태 : "+dto.getState()+"\t");
 	}
 	
 	public int inputNum() {

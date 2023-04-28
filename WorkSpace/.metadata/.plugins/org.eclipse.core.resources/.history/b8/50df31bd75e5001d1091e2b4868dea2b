@@ -4,12 +4,6 @@ import java.util.Scanner;
 
 public class Phone1DAO {
 	
-	public void display(Phone1DTO dto) {
-		System.out.print("»ö±ò:"+dto.getColor()+"\t");
-		System.out.print("¸ðµ¨¸í:"+dto.getModel()+"\t");
-		System.out.println("»óÅÂ : "+dto.getState()+"\t");
-	}
-	
 	public int inputNum() {
 		while(true) {
 		try {

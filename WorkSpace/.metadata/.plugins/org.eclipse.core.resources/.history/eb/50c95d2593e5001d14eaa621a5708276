@@ -2,7 +2,7 @@ package pack;
 
 public class Phone2DAO extends Phone1DAO{
 	
-	final int MAXCHANNEL = 300;
+	final int MAXCHANNEL = 100;
 	final int MINCHANNEL = 0;
 	
 	@Override

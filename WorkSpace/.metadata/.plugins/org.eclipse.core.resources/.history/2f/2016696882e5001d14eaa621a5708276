@@ -1,6 +1,6 @@
 package pack;
 
-public class Phone2 extends Phone1{
+public class Phone2{
 	public static void main(String[] args) {
 		Phone2DAO dao= new Phone2DAO();
 		Phone2DTO p2dto = new Phone2DTO("검정", "애플", "꺼짐", "정보없음");

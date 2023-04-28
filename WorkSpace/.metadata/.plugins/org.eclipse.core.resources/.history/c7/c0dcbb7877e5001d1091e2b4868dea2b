@@ -5,7 +5,10 @@ public class Phone2 extends Phone1{
 		Phone2DAO dao= new Phone2DAO();
 		Phone2DTO p2dto = new Phone2DTO("검정", "애플", "꺼짐", "정보없음");
 		
-		dao.display(p2dto);
+		System.out.println("색깔:"+p2dto.getColor());
+		System.out.println("모델명:"+p2dto.getModel());
+		System.out.println("상태 : "+p2dto.getState());
+		System.out.println("채널 : "+p2dto.getChannel());
 		
 		
 		System.out.println("전원을 키시려면 1번을 입력해주세요. 1을 제외한 모든 수 입력 시 꺼진 상태 유지");

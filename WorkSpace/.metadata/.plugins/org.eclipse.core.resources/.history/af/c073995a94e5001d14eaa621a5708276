@@ -1,6 +1,6 @@
 package pack;
 
-public class Phone3 extends Phone2{
+public class Phone3{
 	public static void main(String[] args) {
 		Phone3DAO dao= new Phone3DAO();
 		Phone3DTO p3dto = new Phone3DTO("검정", "애플", "꺼짐", "정보없음");
