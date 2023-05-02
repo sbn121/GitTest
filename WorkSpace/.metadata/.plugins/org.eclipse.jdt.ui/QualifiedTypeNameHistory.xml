@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="pack03_oop1.Product"/>
-    <fullyQualifiedTypeName name="pack03_oop1.ProductMain"/>
-    <fullyQualifiedTypeName name="pack03_oop1.ProductDAO"/>
-    <fullyQualifiedTypeName name="pack03_oop1.ProductDTO"/>
-    <fullyQualifiedTypeName name="pack03_oop1.Student"/>
-    <fullyQualifiedTypeName name="pack03_oop1.StudentDAO"/>
-    <fullyQualifiedTypeName name="pack03_oop1.StudentDTO"/>
-    <fullyQualifiedTypeName name="pack07_oop3.ProductDTO"/>
-    <fullyQualifiedTypeName name="pack07_oop3.ProductDAO"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="pack06_japangi.JapangiDTO"/>
     <fullyQualifiedTypeName name="pack06_japangi.JapangiDAO"/>
@@ -24,7 +15,6 @@
     <fullyQualifiedTypeName name="pack02_extend.SuperClass"/>
     <fullyQualifiedTypeName name="pack02_extend.SubClass"/>
     <fullyQualifiedTypeName name="java.lang.Deprecated"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="pack04.extend.CellPhone"/>
     <fullyQualifiedTypeName name="pack04.extend.SmartPhone"/>
     <fullyQualifiedTypeName name="pack04.extend.DmbPhone"/>
@@ -46,7 +36,6 @@
     <fullyQualifiedTypeName name="pack04.db.OracleDAO"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="pack.Phone1DAO"/>
-    <fullyQualifiedTypeName name="pack.Phone1DTO"/>
     <fullyQualifiedTypeName name="pack.Phone1"/>
     <fullyQualifiedTypeName name="pack.Phone2DAO"/>
     <fullyQualifiedTypeName name="pack01.nasted.Main"/>
@@ -60,4 +49,15 @@
     <fullyQualifiedTypeName name="pack01.nasted.A.AA.BB.CC"/>
     <fullyQualifiedTypeName name="pack01.nasted.A.AA.BB.CC.DD"/>
     <fullyQualifiedTypeName name="pack.Phone2DTO"/>
+    <fullyQualifiedTypeName name="pack.Phone1DTO"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.awt.Toolkit"/>
+    <fullyQualifiedTypeName name="pack01.thread.Ex02_BeepTask"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="pack01.thread.Ex04_BeepThread"/>
+    <fullyQualifiedTypeName name="pack01.thread.Ex05_ThreadB"/>
+    <fullyQualifiedTypeName name="pack01.thread.Ex05_ThreadA"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="pack01.thread.Ex06_YoutubeThread"/>
+    <fullyQualifiedTypeName name="pack01.thread.Ex06_MelonThread"/>
 </qualifiedTypeNameHistroy>

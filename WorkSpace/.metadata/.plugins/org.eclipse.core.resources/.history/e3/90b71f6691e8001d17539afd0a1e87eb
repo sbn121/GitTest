@@ -1,0 +1,17 @@
+package pack02.horsegame;
+
+public class PlayMain {
+	public static void main(String[] args) {
+		System.out.println("잠시후 경기가 시작됩니다.");
+		Player p1 = new Player(1, 1);
+		Player p2 = new Player(2, 2);
+		Player p3 = new Player(3, 3);
+		Player p4 = new Player(4, 4);
+		Player p5 = new Player(5, 5);
+		p1.start();
+		p2.start();
+		p3.start();
+		p4.start();
+		p5.start();
+	}
+}

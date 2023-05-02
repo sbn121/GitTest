@@ -1,0 +1,13 @@
+package pack01.thread;
+
+public class Ex05_Main {
+	public static void main(String[] args) {
+		Ex05_ThreadA threadA = new Ex05_ThreadA();
+		System.out.println("작업 이름 : "+threadA.getName());
+		threadA.start();
+		
+		Ex05_ThreadB threadB = new Ex05_ThreadB();
+		System.out.println("작업 이름 : "+threadB.getName());
+		threadB.start();
+	}
+}

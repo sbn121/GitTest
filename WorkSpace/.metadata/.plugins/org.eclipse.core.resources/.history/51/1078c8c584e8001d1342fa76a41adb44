@@ -1,0 +1,9 @@
+package pack01.thread;
+
+public class Ex02_BeepMain {
+	public static void main(String[] args) {
+//		Ex02_BeepTask eb02 = new Ex02_BeepTask(); 인스턴스화 : 객체를 메모리에 올려서 (eb)사용할 준비 함
+		Runnable eb = new Ex02_BeepTask(); //같은 구조를 가지고 있기 때문에(run)
+		eb.run();
+	}
+}

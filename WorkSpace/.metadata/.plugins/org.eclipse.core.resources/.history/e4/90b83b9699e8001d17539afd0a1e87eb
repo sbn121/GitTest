@@ -1,0 +1,17 @@
+package pack01.inputstream;
+
+import java.io.IOException;
+
+public class Ex01_SystemIn {
+	public static void main(String[] args) {//main메소드==메인Thread(메모리를 할당받아 프로그램이 시작됨)
+		//Scanner 이용시 System.in
+		try {
+			int data = System.in.read();
+			System.out.println(data);
+			
+		} catch (IOException e) { //Input, Output : 데이터가 들어오거나 나갈 때 중간에 오류가 생기면 반드시, 예외처리를 해줘야함
+			e.printStackTrace();
+		}
+		
+	}
+}

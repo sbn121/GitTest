@@ -1,0 +1,7 @@
+package pack01.thread;
+
+public class Ex06_ThreadTest {
+	//YoutubeThread라는 작업을 하나 별도로 만듬
+	//MelonThread란느 작업을 하나 별도로 만듬
+	//
+}

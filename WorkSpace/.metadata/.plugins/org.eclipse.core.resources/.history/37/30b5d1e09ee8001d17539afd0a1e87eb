@@ -1,0 +1,22 @@
+package pack01.inputstream;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Ex03_InputMultiple {
+	public static void main(String[] args) throws IOException {
+		InputStream is = System.in;
+		System.out.println("영문자 여러 글자를 입력하세요 : ");
+//		int data = is.read();
+		while(true) {
+			int data = is.read();
+			System.out.println(data);
+			System.out.println("입력하신 문자는 "+(char)data+"입니다.");
+			if(data==45) {
+				System.out.println("종료합니다.");
+				break;
+			}
+		}
+		
+	}
+}
