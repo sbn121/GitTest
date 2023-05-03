@@ -1,0 +1,10 @@
+package dao.dto.method;
+
+public class HumanMain {
+	public static void main(String[] args) {
+		Human human = new Human();
+		System.out.println(human.eye);
+		System.out.println(human.ear);
+		human.coding();
+	}
+}

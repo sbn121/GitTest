@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class GetterSetterMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		GetterSetter gs = new GetterSetter();
+		while(true) {
+			try {
+				gs.age = Integer.parseInt(sc.nextLine());
+				if(gs.age<=0) {
+					System.out.println("입력오류");
+				}else {
+					System.out.println("나이 : "+gs.age);
+				}
+			}catch (Exception e) {
+				System.out.println("입력오류");
+			}
+		}
+	}
+}

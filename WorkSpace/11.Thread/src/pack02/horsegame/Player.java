@@ -12,7 +12,7 @@ public class Player extends Thread{
 	}
 	
 	
-	//thread.start(); 작업은 반드시 run메도스에 구현한다(interface의 경우에도 run)
+	//thread.start(); 작업은 반드시 run메소드에 구현한다(interface의 경우에도 run)
 	@Override
 	public void run() {
 		int hereLocation = 0; //0에서부터 출발한다고 변수로 만듬

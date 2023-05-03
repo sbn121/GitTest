@@ -1,0 +1,11 @@
+
+public class GetterSetter {
+	public int age;
+
+	public GetterSetter(int age) {
+		if(age>=1) {
+		this.age = age;
+		}
+	} 
+	
+}

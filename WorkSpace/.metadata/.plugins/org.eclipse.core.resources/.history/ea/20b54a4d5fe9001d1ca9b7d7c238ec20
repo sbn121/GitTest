@@ -1,0 +1,19 @@
+package dao.dto.method;
+
+public class MethodTest {
+	public static void main(String[] args) {
+		MethodTest mt = new MethodTest();
+		mt.method("564");
+		int i = mt.method2(456);
+		System.out.println(i);
+	}
+	
+	public void method(String str) {
+		System.out.println("입력받은 문자 : "+str);
+	}
+	
+	public int method2(int i) {
+		System.out.print("입력받은 숫자 x 100 = ");
+		return i*100;
+	}
+}

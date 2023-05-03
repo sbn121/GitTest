@@ -1,0 +1,15 @@
+
+public class GetterSetter {
+	public int age;
+	
+	public void method(int num) {
+		if(num<1) {
+			System.out.println("잘못된 입력");
+		}else {
+			System.out.println("잘된입력");
+			age = num;
+			System.out.println(age + "gs.age의 값");
+		}
+	}
+	
+}

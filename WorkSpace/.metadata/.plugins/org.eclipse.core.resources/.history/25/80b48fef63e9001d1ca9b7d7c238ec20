@@ -1,0 +1,15 @@
+package extend.imp;
+
+public class ChildClass extends SuperParent{
+	//extends : 모든 멤버의 상속(private 제외)
+	public static void main(String[] args) {
+		ChildClass cc = new ChildClass();
+		System.out.println(cc.superField);
+		cc.childMethod();
+	}
+	
+	public void childMethod() {
+		System.out.println(superField);
+		superMethod();
+	}
+}

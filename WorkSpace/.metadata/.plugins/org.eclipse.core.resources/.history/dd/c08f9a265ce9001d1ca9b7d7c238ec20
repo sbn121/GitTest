@@ -1,0 +1,5 @@
+package dao.dto.method;
+
+public class HumanDAO {
+
+}
