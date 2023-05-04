@@ -1,0 +1,10 @@
+package pack01.inputstream;
+
+import java.io.IOException;
+
+public class ScannerMain {
+	public static void main(String[] args) throws IOException {
+		SbnScanner ss = new SbnScanner(System.in);
+		System.out.println(ss.nextLine());
+	}
+}

@@ -1,0 +1,12 @@
+package pack02.outputstream;
+
+public class Ex01_SystemOut {
+	public static void main(String[] args) {
+		// 이클립스에서(자바) 노드 스트림 : System.in, System.out
+		// 콘솔창을 통해서 어떤 걸 입력받기 위해서 가장 처음 초기화가 자동으로 되어있는 InputStream -> System.in
+		// Scanner sc = new Scanner( 'System.in' );
+		// 콘솔창에 출력을 위해서 가장 처음으로 초기화가 되어있는 OutputStream -> System.out
+		//  'System.out' .println <- 
+		System.out.write(65);
+	}
+}

@@ -1,0 +1,13 @@
+package pack01.inputstream;
+
+import java.io.IOException;
+
+public class ScannerMain {
+	public static void main(String[] args) {
+		SbnScanner ss = new SbnScanner(System.in);
+		String inputData = ss.nextLine();
+		System.out.println(inputData);
+		int inputData1 = ss.nextInt();
+		System.out.println(inputData1);
+	}
+}

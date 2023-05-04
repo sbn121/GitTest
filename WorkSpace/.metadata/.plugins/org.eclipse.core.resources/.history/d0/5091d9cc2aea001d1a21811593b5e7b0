@@ -1,0 +1,21 @@
+
+public class Test01 {
+	public static void main(String[] args) {
+		int dataI = 1;
+		double dataD = 1.5;
+		char dataC = 'A';
+		String dataS = "SBN";
+		System.out.println("정수형 데이터 : "+dataI);
+		System.out.println("실수형 데이터 : "+dataD);
+		System.out.println("문자 : "+dataC);
+		System.out.println("문자열 : "+dataS);
+		
+		System.out.println("|\\_/|");
+		System.out.println("|q p|\t/}");
+		System.out.println("( 0 )\"\"\"\\");
+		System.out.println("|\"^\"'\t|");
+		System.out.println("||_/=\\\\__|");
+		
+	}
+	
+}

@@ -1,0 +1,7 @@
+package pack01.inputstream;
+
+public class ScannerMain {
+	public static void main(String[] args) {
+		SbnScanner ss = new SbnScanner(System.in);
+	}
+}

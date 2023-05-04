@@ -1,0 +1,15 @@
+package pack03.file;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Ex04_ImageStr {
+	// FileInputStream, FileOutputStream
+	// 파일(그림, 음원, 영상 등)에서 바이트 단위로 입출력을 하는 스트림을 의미함
+	// 이미지 파일을 읽어서 출력하는 행위(ctrl+c, ctrl+v)(IO : Input&Output)
+	// 원본이미지를 준비해서 이미지를 읽어온 다음 -> 다른이름으로 다시 출력
+	public static void main(String[] args) throws IOException {
+		FileInputStream fis = new FileInputStream("D:\\Study_Java\\WorkSpace\\12.IO_FileTest\\pic.png");
+	}
+}

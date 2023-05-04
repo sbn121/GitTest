@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Test01 {
+	public static void main(String[] args) {
+		int dataI = 1;
+		double dataD = 1.5;
+		char dataC = 'A';
+		String dataS = "SBN";
+		System.out.println("정수형 데이터 : "+dataI);
+		System.out.println("실수형 데이터 : "+dataD);
+		System.out.println("문자 : "+dataC);
+		System.out.println("문자열 : "+dataS);
+		
+		System.out.println("|\\_/|");
+		System.out.println("|q p|\t/}");
+		System.out.println("( 0 )\"\"\"\\");
+		System.out.println("|\"^\"'\t|");
+		System.out.println("||_/=\\\\__|");
+		System.out.println("우리는 \"개발자\" 입니다");
+		
+		Scanner sc = new Scanner(System.in);
+		int iData = Integer.parseInt(sc.nextLine());
+		System.out.println("사용자가 입력한 값 : "+iData);
+		System.out.println("iData에 담긴 값 : iData ("+iData+")");
+		Double dData = Double.parseDouble(sc.nextLine());
+		System.out.println("사용자가 입력한 값 : "+dData);
+		System.out.println("dData에 담긴 값 : dData ("+dData+")");
+		
+		System.out.println("첫번째 숫자를 입력하세요.");
+		int num1 = Integer.parseInt(sc.nextLine());
+		System.out.println("두번째 숫자를 입력하세요.");
+		int num2 = Integer.parseInt(sc.nextLine());
+		System.out.println(num1+"은"+num2+"보다 작습니다."+(num1<num2 ? true : false));
+		
+		
+	}
+	
+}

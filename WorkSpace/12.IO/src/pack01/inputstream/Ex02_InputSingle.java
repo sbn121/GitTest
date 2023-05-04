@@ -20,7 +20,7 @@ public class Ex02_InputSingle {
 			System.out.println("남은 데이터 : "+data);//13(CR) Enter Key
 			data = is.read();//남은 데이터가 아직 있는지 확인 -> 10
 			System.out.println("남은 데이터 : "+data);//10(LF) Enter Key
-			System.out.println("데이터\n\n");
+			System.out.println("데이터\r\n");
 			System.out.println("줄바꿈");
 			
 		} catch (IOException e) {
