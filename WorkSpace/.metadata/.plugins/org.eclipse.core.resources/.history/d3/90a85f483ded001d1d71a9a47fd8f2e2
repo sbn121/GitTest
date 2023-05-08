@@ -1,0 +1,15 @@
+package pack01.list;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
+public class Ex02_Vector {
+	public static void main(String[] args) {
+		//사용 빈도가 없거나 매우 낮기 때문에 이론만 살펴보고 넘어감.
+		//List라는 Interface를 상속받았기 때문에 기본 구조는 ArrayList, LinkedList, Vector 전부 비슷함.
+		List<TestDTO> list = new Vector<TestDTO>();
+		list.add(new TestDTO("빛나", "송"));
+		System.out.println(list.get(0).getFirstName());
+	}
+}

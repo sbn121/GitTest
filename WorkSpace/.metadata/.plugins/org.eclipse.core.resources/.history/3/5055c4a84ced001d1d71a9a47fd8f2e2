@@ -1,0 +1,14 @@
+package pack01.list;
+
+public class BoardDTO {
+	int field1;
+	String field2, field3;
+	
+	public BoardDTO(int field1, String field2, String field3) {
+		this.field1 = field1;
+		this.field2 = field2;
+		this.field3 = field3;
+	}
+	
+	
+}

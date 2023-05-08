@@ -40,18 +40,26 @@ public class Test02 {
 		dataA = Integer.parseInt(sc.nextLine());
 		dataB = Integer.parseInt(sc.nextLine());
 		System.out.println("입력된 데이터 : dataA: "+dataA+", dataB: "+dataB);
-		int i, j;
+		int i = 0, j=0;
+		int sum = 0;
 		if(dataA>dataB) {
 			i = dataA;
 			j = dataB;
 		}else {
 			j = dataA;
 			i = dataB;
-		}	
+		}
+		String sSum = "출력 데이터 : ";
 		while(i>=j) {
-			String sum = ""+sum+"+"+j;
-		} 
-		
+			sum +=j;
+			if(sum==j) {
+				sSum += j;
+			}else {
+				sSum += " + "+j;
+			}
+			j++;
+		}
+		System.out.println(sSum+" = "+sum);
 		
 		
 		

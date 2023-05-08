@@ -1,0 +1,16 @@
+package pack01.list;
+
+import java.util.ArrayList;
+
+public class BoardDAO {
+	ArrayList<BoardDTO> getList(BoardDTO dto) {
+		
+		return new ArrayList<BoardDTO>();
+	}
+	void getDisplay(BoardDTO dto) {
+		for(BoardDTO bdto : getList(dto)) {
+			System.out.println(bdto);
+		}
+		
+	}
+}
