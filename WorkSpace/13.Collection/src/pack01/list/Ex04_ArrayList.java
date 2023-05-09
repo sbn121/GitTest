@@ -13,11 +13,11 @@ public class Ex04_ArrayList {
 		list1.add("°¡");
 		list1.add("³ª");
 		
-		List<Integer> list2 = new ArrayList<Integer>();
+		List<Integer> list2 = new ArrayList<>();
 		list2.add(1);
 		list2.add(2);
 		
-		List<Boolean> list3 = new ArrayList<Boolean>();
+		List<Boolean> list3 = new ArrayList<>();
 		list3.add(true);
 		list3.add(false);
 		

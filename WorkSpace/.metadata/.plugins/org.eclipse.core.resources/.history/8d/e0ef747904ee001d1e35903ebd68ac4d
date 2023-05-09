@@ -1,0 +1,28 @@
+package pack02.map;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Ex01_Hash {
+	public static void main(String[] args) {
+		//Collection자료구조는 <> 클래스타입만 넣을 수 있게 구조가 되어있음.
+		//ArrayList< Class타입 뭐든 가능 > 이름 = new ..
+		//해쉬코드 : 객체를 식별하는 하나의 정수값
+//		String strHash1 = "hash1";
+//		String strHash2 = "hash";
+//		String strHash3 = new String("hash");
+//		System.out.println(strHash1.hashCode());
+//		System.out.println(strHash2.hashCode());
+//		System.out.println(strHash3.hashCode());
+		//↑(이론)데이터를 식별할 수 있는 해시코드를 기준으로 데이터를 저장하는 것(HashSet)
+		Set<String> set = new HashSet<>();
+		set.add("java");
+		set.add("html");
+		set.add("jsp/servlet");
+		set.add("oracledb");
+		System.out.println(set.size());
+		
+		
+		
+	}
+}

@@ -1,0 +1,5 @@
+package pack02.jdbc;
+
+public class EmpDTO {
+
+}

@@ -1,0 +1,11 @@
+package pack01.list;
+
+import java.util.List;
+
+public class MenuMain {
+	public static void main(String[] args) {
+		MenuDAO dao = new MenuDAO();
+		List<MenuDTO> list = dao.getList();
+		dao.displayList(list);
+	}
+}

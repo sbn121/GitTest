@@ -1,0 +1,14 @@
+package pack02.map;
+
+public class Ex01_Hash {
+	public static void main(String[] args) {
+		//Collection자료구조는 <> 클래스타입만 넣을 수 있게 구조가 되어있음.
+		//ArrayList< Class타입 뭐든 가능 > 이름 = new ..
+		//해쉬코드 : 객체를 식별하는 하나의 정수값
+		String strHash1 = "hash";
+		String strHash2 = "hash";
+		System.out.println(strHash1.hashCode());
+		System.out.println(strHash2.hashCode());
+		
+	}
+}

@@ -1,6 +1,7 @@
 package pack01.list;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Ex03_LinkedList {
@@ -11,7 +12,7 @@ public class Ex03_LinkedList {
 		//책 예제 : System.nanoTime();이라는 메소드를 이용해서 ArrayList vs LinkedList를 비교
 		
 		List<String> listArray = new ArrayList<String>();
-		List<String> listLinked = new ArrayList<String>();
+		List<String> listLinked = new LinkedList<String>();
 		
 		long startTime;
 		long endTime;

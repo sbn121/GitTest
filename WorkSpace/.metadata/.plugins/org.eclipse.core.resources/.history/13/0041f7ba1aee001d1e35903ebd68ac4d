@@ -1,0 +1,31 @@
+package pack02.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import oracle.jdbc.driver.OracleDriver;
+
+public class EmpDAO {//실제 데이터베이스와 연동하여 요구사항 처리 후 리턴
+	private Connection conn; //연결객체
+	private PreparedStatement ps; //전송 실행 객체
+	private ResultSet rs; //결과 객체
+	
+	//데이터베이스 접속이 하나의 기능으로 만들고 재활용 (성공하면 그 다음 => ps를 사용한다.)
+	public Connection getConn() {
+		//접속시필요한것 : 접속주소(url), 계정(user), 암호(password)
+		String url = "jdbc:oracle:thin:@127.0.01:1521:xe";
+		String user = "hr";
+		String password = "0000";
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection conn = DriverManager.getConnection(url, user, password);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+}

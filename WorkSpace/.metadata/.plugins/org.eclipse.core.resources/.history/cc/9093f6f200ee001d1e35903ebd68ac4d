@@ -1,0 +1,22 @@
+package pack01.list;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MenuDAO {
+	public List<MenuDTO> getList() {
+		List<MenuDTO> list = new ArrayList<>();
+		list.add(new MenuDTO(1, 10000, "메뉴1"));
+		list.add(new MenuDTO(1, 10000, "메뉴1"));
+		list.add(new MenuDTO(1, 10000, "메뉴1"));
+		return list;
+	}
+	
+	public void displayList(List<MenuDTO> list) {
+		for(MenuDTO dto : list) {
+			System.out.print(dto.getNum());
+			System.out.print(dto.getName());
+			System.out.println(dto.getPrice());
+		}
+	}
+}

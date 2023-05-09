@@ -1,0 +1,24 @@
+package pack01.list;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DAO {
+	public List<DTO> getList(){
+		List<DTO> list = new ArrayList<>();
+		list.add(new DTO(1, "力格1", "郴侩1"));
+		list.add(new DTO(2, "力格2", "郴侩2"));
+		list.add(new DTO(3, "力格3", "郴侩3"));
+		return list;
+	}
+	
+	public void displayList(List<DTO> list) {
+		for(DTO dto : list) {
+			System.out.print(dto.getBoardNum());
+			System.out.print(dto.getBoardTitle());
+			System.out.println(dto.getBoardContent());
+		}
+	}
+	
+	
+}
