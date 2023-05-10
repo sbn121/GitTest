@@ -1,0 +1,32 @@
+package pack03.mysqlplus;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import oracle.jdbc.driver.OracleDriver;
+
+public class SqlDAO {
+	Connection conn; //sqlplus에서 실제로 사용자명과 비밀번호를 입력받았을 때 접속을 시도하는 연결객체
+	
+	public void checkConnection(String user, String password) {
+		//메인에서 입력한 사용자명과 비밀번호를 여기 메소드까지 가지고 와야함.
+		//SqlPlusMain에서 checkConnection메소드를 호출하는데 사용자명과 비밀번호가 출력될 수 있게 해보기
+		System.out.println("check : "+user +" "+ password);
+		String url = "jdbc:oracle:thin:@127.0.01:1521:xe";
+		//oracle.jdbc.driver.OracleDriver
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection(url, user, password);
+		} catch (ClassNotFoundException e) {
+			System.out.println(" 오라클 드라이버가 준비가 안 되어서 사용이 불가능한 PC입니다. ");
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} catch (Exception e) {
+			System.out.println(" 알 수 없는 오류 발생! 개발자에게 문의하세요. ");
+		} 
+		
+		
+		
+	}
+}

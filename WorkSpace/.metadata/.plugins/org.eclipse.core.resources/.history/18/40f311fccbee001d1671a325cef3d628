@@ -1,0 +1,16 @@
+package pack03.mysqlplus;
+
+import java.util.Scanner;
+
+public class SqlPlusMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println(" SbnSqlPlus 입니다. ");
+		System.out.println(" 사용자명을 입력 : ");
+		String user = sc.nextLine();
+		System.out.println(" 비밀번호를 입력 : ");
+		String password = sc.nextLine();
+		
+		System.out.println(user + password);
+	}
+}

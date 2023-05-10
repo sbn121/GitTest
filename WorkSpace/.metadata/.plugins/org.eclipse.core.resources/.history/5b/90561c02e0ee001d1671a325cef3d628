@@ -1,0 +1,5 @@
+package pack05.email;
+
+public class SendEmail {
+
+}

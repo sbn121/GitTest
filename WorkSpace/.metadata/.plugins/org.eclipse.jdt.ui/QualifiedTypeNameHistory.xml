@@ -1,27 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="pack01.nasted.A.AA.BB"/>
-    <fullyQualifiedTypeName name="pack01.nasted.A.AA.BB.CC"/>
-    <fullyQualifiedTypeName name="pack01.nasted.A.AA.BB.CC.DD"/>
-    <fullyQualifiedTypeName name="pack.Phone2DTO"/>
-    <fullyQualifiedTypeName name="pack.Phone1DTO"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="java.awt.Toolkit"/>
-    <fullyQualifiedTypeName name="pack01.thread.Ex02_BeepTask"/>
-    <fullyQualifiedTypeName name="java.lang.Runnable"/>
-    <fullyQualifiedTypeName name="pack01.thread.Ex04_BeepThread"/>
-    <fullyQualifiedTypeName name="pack01.thread.Ex05_ThreadB"/>
-    <fullyQualifiedTypeName name="pack01.thread.Ex05_ThreadA"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="pack01.thread.Ex06_YoutubeThread"/>
-    <fullyQualifiedTypeName name="pack01.thread.Ex06_MelonThread"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="pack02.horsegame.Player"/>
-    <fullyQualifiedTypeName name="pack02.horsegame.PlayMain"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="Member"/>
-    <fullyQualifiedTypeName name="Human"/>
-    <fullyQualifiedTypeName name="GetterSetter"/>
     <fullyQualifiedTypeName name="dao.dto.method.Human"/>
     <fullyQualifiedTypeName name="dao.dto.method.HumanDAO"/>
     <fullyQualifiedTypeName name="dao.dto.method.Method"/>
@@ -49,7 +27,6 @@
     <fullyQualifiedTypeName name="java.io.Writer"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="pack01.list.Ex02_Vector"/>
     <fullyQualifiedTypeName name="java.util.Vector"/>
     <fullyQualifiedTypeName name="pack01.list.TestDTO"/>
@@ -60,4 +37,27 @@
     <fullyQualifiedTypeName name="pack01.list.BoardDAO"/>
     <fullyQualifiedTypeName name="pack01.list.BoardDTO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="pack03.mysqlplus.SqlDAO"/>
+    <fullyQualifiedTypeName name="pack03.mysqlplus.SqlPlusMain"/>
+    <fullyQualifiedTypeName name="oracle.jdbc.driver.OracleDriver"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="net.nurigo.sdk.message.response.SingleMessageSentResponse"/>
+    <fullyQualifiedTypeName name="net.nurigo.sdk.message.request.SingleMessageSendingRequest"/>
+    <fullyQualifiedTypeName name="net.nurigo.sdk.message.model.Message"/>
+    <fullyQualifiedTypeName name="net.nurigo.java_sdk.api.Message"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="net.nurigo.java_sdk.exceptions.CoolsmsException"/>
+    <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+    <fullyQualifiedTypeName name="org.apache.commons.mail.SimpleEmail"/>
+    <fullyQualifiedTypeName name="pack05.email.SendEmail"/>
+    <fullyQualifiedTypeName name="org.apache.commons.mail.MultiPartEmail"/>
+    <fullyQualifiedTypeName name="org.apache.commons.mail.EmailAttachment"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="org.apache.commons.mail.HtmlEmail"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,17 @@
+package pack04.sms;
+
+import net.nurigo.java_sdk.api.Message;
+
+public class SendSMS {
+	public static void main(String[] args) {
+		//Git-hub 샘플 : https://github.com/coolsms/coolsms-java-examples/
+		//github예제가 interface와 여러 class로 분리를 해놔서 현재는 보기가 힘듬.
+		
+		final String APIKEY = "NCSIGGEIAAPYSXHO";
+		final String APISECRET = "Q3WAV69X3RISPNBEJLIQ2YN8OCCHGOAY";
+		
+		Message sms = new Message(APIKEY, APISECRET);
+		
+		
+	}
+}

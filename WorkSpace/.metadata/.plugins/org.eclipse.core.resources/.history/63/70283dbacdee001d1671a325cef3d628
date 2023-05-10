@@ -1,0 +1,13 @@
+package pack03.mysqlplus;
+
+import java.sql.Connection;
+
+public class SqlDAO {
+	Connection conn; //sqlplus에서 실제로 사용자명과 비밀번호를 입력받았을 때 접속을 시도하는 연결객체
+	
+	public void checkConnection(String user, String password) {
+		//메인에서 입력한 사용자명과 비밀번호를 여기 메소드까지 가지고 와야함.
+		//SqlPlusMain에서 checkConnection메소드를 호출하는데 사용자명과 비밀번호가 출력될 수 있게 해보기
+		System.out.println(user +" "+ password);
+	}
+}

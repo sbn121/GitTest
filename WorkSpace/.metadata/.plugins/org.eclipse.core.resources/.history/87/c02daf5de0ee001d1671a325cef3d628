@@ -1,0 +1,48 @@
+package pack05.email;
+
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.SimpleEmail;
+
+public class SendEmail {
+	public static void main(String[] args) {
+		SendEmail se = new SendEmail();
+		se.sendSimple();
+	}
+	//1. 단순하게 텍스트만 있는 이메일 : SimpleEmail
+	//2. 첨부파일이나 url등으로 이미지가 있는 이메일 : MultipartEmail
+	//3. 모든 기능을 가지고 html 태그까지 사용가능한 이메일 : HtmlEmail
+	
+	public void sendSimple() {
+		SimpleEmail mail = new SimpleEmail();
+		//smtp.naver.com
+		mail.setHostName("smtp.naver.com");
+		mail.setCharset("utf-8");//한글깨짐방지
+		mail.setDebug(true);//오류를 찾아서 개발을 하고있는 과정인지.
+		
+		mail.setAuthentication("sbn121", "sochldosmsfngks");
+		mail.setSSLOnConnect(true);
+		//====================고정 어떤 메일을 쓰든 smtp서버와 smtp서버를 이용할 수 있는 고객인증
+		
+		//송신인
+		try {
+			mail.setFrom("sbn121@naver.com", "한울SBNFROM");
+			
+			mail.addTo("sbn121@naver.com", "한울SBNTO"); //여러 개 하면여러명한테전송
+			
+			mail.setSubject("회원가입 축하 메세지");
+			mail.setMsg("내용 입니다~");
+			
+			//mail객체가 모든 정보를 가지고 전송할 준비를 마침.↑
+			
+			mail.send();
+			
+		} catch (EmailException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("Email오류 아닌 거"+e.getMessage());
+		}
+		
+	
+	}
+	
+}
