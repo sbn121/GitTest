@@ -46,7 +46,7 @@ public class SqlDAO {
 			rs = ps.executeQuery();
 			while(rs.next()) { //데이터를 조회할 때 컬럼의 별칭이나 이름을 모르는 상태로 조회를 하면
 							   //DTO에 담을 수가 없기 때문에 이런 방법은 사용을 안 한다.
-				for(int i=1; i<rs.getMetaData().getColumnCount();i++) {
+				for(int i=1; i<=rs.getMetaData().getColumnCount();i++) {
 				System.out.print(rs.getString(i)); 
 				}
 				System.out.println();
