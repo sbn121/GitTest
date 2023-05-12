@@ -10,12 +10,12 @@ import org.jsoup.Jsoup;
 
 public class JsoupAPI {
 	public static void main(String[] args) {
-		//?page=2&perPage=10&serviceKey=CmdwdrVDPAH0A40Af3zXcU6PGKetrDF1TI74tfwOdoQMRi8svpP5GfN5Ph%2BZ9qAsk9e1Vl1nByaDvvCdzr3gTw%3D%3D
+		// ?page=2&perPage=10&serviceKey=CmdwdrVDPAH0A40Af3zXcU6PGKetrDF1TI74tfwOdoQMRi8svpP5GfN5Ph%2BZ9qAsk9e1Vl1nByaDvvCdzr3gTw%3D%3D
 		// Jsoup API를 사용하기 : http형태로 되어있는 데이터를 json또는 xml등의 형태로 String으로 가져옴
 		// String을 JsonPraser, JsonObject를 이용하여 우리가 활용가능한 변수 타입으로 각각을 빼오는 작업을 한다.
 		// http의 요청은 인터넷주소인 Url을 알아야함. 
 		// Url기준으로 ?로 되어있는 파라메터를 정확하게 넣어야, 원하는 결과를 얻을 수 있다.
-	    //우리가 인터넷 주소에 요청할 때 보내주는 파라메터는 전부 String
+	    // 우리가 인터넷 주소에 요청할 때 보내주는 파라메터는 전부 String
 		String url = "https://api.odcloud.kr/api/3082925/v1/uddi:7c291067-a956-4811-a9ec-942b6979ff77_201709270816";
 		String doc = null;
 		try {

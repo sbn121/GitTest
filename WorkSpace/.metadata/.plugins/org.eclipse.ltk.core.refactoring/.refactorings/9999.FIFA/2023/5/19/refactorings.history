@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;pack_fifa.FIFADTI&apos; to &apos;FIFADTO&apos;&#x0D;&#x0A;- Original project: &apos;9999.FIFA&apos;&#x0D;&#x0A;- Original element: &apos;pack_fifa.FIFADTI&apos;&#x0D;&#x0A;- Renamed element: &apos;pack_fifa.FIFADTO&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;FIFADTI&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;pack_fifa{FIFADTI.java[FIFADTI" matchStrategy="1" name="FIFADTO" qualified="false" references="true" similarDeclarations="false" stamp="1683867604764" textual="false" version="1.0"/>
+</session>

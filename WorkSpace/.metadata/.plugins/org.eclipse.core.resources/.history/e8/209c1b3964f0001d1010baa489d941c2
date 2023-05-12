@@ -1,0 +1,5 @@
+package pack07.last.jdbc;
+
+public class BoardDTO {
+
+}

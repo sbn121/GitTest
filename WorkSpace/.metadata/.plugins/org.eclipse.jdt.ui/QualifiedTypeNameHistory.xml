@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="dao.dto.method.Human"/>
-    <fullyQualifiedTypeName name="dao.dto.method.HumanDAO"/>
-    <fullyQualifiedTypeName name="dao.dto.method.Method"/>
     <fullyQualifiedTypeName name="dao.dto.method.MethodTest"/>
     <fullyQualifiedTypeName name="extend.imp.SuperParent"/>
     <fullyQualifiedTypeName name="extend.imp.ChildClass"/>
@@ -51,7 +48,6 @@
     <fullyQualifiedTypeName name="net.nurigo.java_sdk.api.Message"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="net.nurigo.java_sdk.exceptions.CoolsmsException"/>
-    <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
     <fullyQualifiedTypeName name="org.apache.commons.mail.SimpleEmail"/>
     <fullyQualifiedTypeName name="pack05.email.SendEmail"/>
     <fullyQualifiedTypeName name="org.apache.commons.mail.MultiPartEmail"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="org.apache.commons.mail.HtmlEmail"/>
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
+    <fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+    <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+    <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
 </qualifiedTypeNameHistroy>
