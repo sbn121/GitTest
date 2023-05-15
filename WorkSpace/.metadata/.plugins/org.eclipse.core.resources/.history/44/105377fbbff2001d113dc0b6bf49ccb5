@@ -1,0 +1,39 @@
+package pack_fifa;
+
+import java.util.Scanner;
+
+public class FIFAMAIN {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		FIFAUSERDAO dao = new FIFAUSERDAO();
+		while(true) {
+			System.out.println("메뉴를 골라주세요.");
+			System.out.println("1. 로그인 2. 회원가입 3. 종료");
+			int Menu = dao.inputInt();
+			if(Menu==1) {
+				while(true) {
+				System.out.println("1. 관리자 모드 2. 사용자 모드");
+				Menu = dao.inputInt();
+				if(Menu==1) {
+					
+				}else if(Menu==2) {
+					String id = sc.nextLine();
+					String pw = sc.nextLine();
+					int count=0;
+					while(count==3) {
+						count++;
+					dao.login(id, pw);
+					}
+				}else {
+					System.out.println("입력오류 1 또는 2를 입력해주세요.");
+				}
+				}
+			}else if(Menu==2) {
+				
+			}else if(Menu==3) {
+				System.out.println("FIFA를 종료합니다.");
+				break;
+			}
+		}
+	}
+}

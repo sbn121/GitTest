@@ -1,0 +1,91 @@
+package pack_fifa;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class FIFAUSERDAO {
+	
+	ArrayList<FIFADTO> myList = new ArrayList<>();
+	
+	public int inputInt() {
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			try {
+				int rtnInt = Integer.parseInt(sc.nextLine());
+				return rtnInt;
+			}catch (Exception e) {
+				System.out.println("숫자 값만 입력해주세요.");
+			}
+		}
+	}
+	
+	
+	public void searchMyPlayer() {
+		for(int i=0; i<myList.size(); i++) {
+			System.out.print("번호 : "+myList.get(i).getPlayer_num());
+			System.out.print("이름 : "+myList.get(i).getPlayer_name());
+			System.out.print("나이 : "+myList.get(i).getPlayer_age());
+			System.out.print("키 : "+myList.get(i).getHeight());
+			System.out.print("주발 : "+myList.get(i).getMain_foot());
+			System.out.print("번호 : "+myList.get(i).getPosition());
+			System.out.println();
+		}
+	}
+	
+	public int formation(int num) {
+		System.out.println("포메이션을 선택해주세요");
+		System.out.println("1번 4-2-3-1\t2번 4-2-2-1-1\t3번 4-2-2-2\t4번 5-2-3");
+		System.out.println("     ★    \t      ★    \t   ★   ★  \t★   ★   ★");
+		System.out.println("  ★  ★  ★ \t      ★    \t ★       ★\t  ★   ★");
+		System.out.println("   ★   ★  \t  ★       ★\t   ★   ★  \t★ ★ ★ ★ ★");
+		System.out.println(" ★  ★ ★  ★\t    ★   ★  \t ★  ★ ★  ★\t    ☆");
+		System.out.println("     ☆    \t  ★  ★ ★  ★\t     ☆    ");
+		System.out.println("          \t      ☆    ");
+		return num;
+	}
+	
+	public void candidate() {
+		for(int i=0; i<myList.size(); i++) {
+			System.out.println(myList.get(i));
+		}
+		
+	}
+	
+	public void buyPlayer() {
+		
+	}
+	
+	public void sellPlayer() {
+		
+	}
+	
+	public void chargeBp() {
+		System.out.println("충전할 금액을 선택해주세요.");
+		System.out.println("1. 1억bp(1,000원) 2. 5억bp(5,000원) 3. 10억bp(10,000원) 4. 100억bp(100,000원)");
+		int bp = inputInt();
+		while(true) {
+			if(bp==1||bp==2||bp==3||bp==4) {
+				System.out.println();
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

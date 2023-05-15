@@ -1,0 +1,8 @@
+package pack_fifa;
+
+public class FIFAMAIN {
+	public static void main(String[] args) {
+		FIFAUSERDAO dao = new FIFAUSERDAO();
+		dao.formation();
+	}
+}
