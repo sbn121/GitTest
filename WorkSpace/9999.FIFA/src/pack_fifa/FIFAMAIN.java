@@ -6,19 +6,43 @@ public class FIFAMAIN {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		FIFAUSERDAO dao = new FIFAUSERDAO();
+		FIFAADMINDAO dao1 = new FIFAADMINDAO();
 		while(true) {
 			System.out.println("메뉴를 골라주세요.");
 			System.out.println("1. 로그인 2. 회원가입 3. 종료");
 			int menu = dao.inputInt();
 			if(menu==1) {
 				while(true) {
-				System.out.println("1. 관리자 모드 2. 사용자 모드");
+				System.out.println("1. 관리자 모드 2. 사용자 모드 3. 메인화면으로 가기");
 				menu = dao.inputInt();
 				if(menu==1) {
-					
+					if(dao1.adminLogin()) {
+						while(true) {
+						System.out.println("1. 선수 등록");
+						System.out.println("2. 수정");
+						System.out.println("3. 삭제");
+						System.out.println("4. 선수 검색");
+						System.out.println("5. 로그아웃");
+						menu = dao.inputInt();
+						if(menu==1) {
+							dao1.addPlayer();
+						}else if(menu==2) {
+							dao1.updatePlayer();
+						}else if(menu==3) {
+							dao1.deletePlayer();
+						}else if(menu==4) {
+							dao1.search();
+						}else if(menu==5) {
+							System.out.println("로그아웃 되었습니다.");
+							break;
+						}else {
+							System.out.println("입력 오류 1~5 사이의 수를 입력하세요.");
+						}
+						
+					}
+					}
 				}else if(menu==2) {
-					dao.login();
-					while(true) {
+					if(dao.login()) {
 						System.out.println("1. 내 선수 검색");
 						System.out.println("2. 스쿼드");
 						System.out.println("3. 상점");
@@ -53,6 +77,9 @@ public class FIFAMAIN {
 							System.out.println("입력오류 1~5 사이의 수를 입력하세요");
 						}
 					}
+				}else if(menu==3) {
+					System.out.println("메인화면으로 돌아갑니다.");
+					break;
 				}else {
 					System.out.println("입력오류 1 또는 2를 입력해주세요.");
 				}

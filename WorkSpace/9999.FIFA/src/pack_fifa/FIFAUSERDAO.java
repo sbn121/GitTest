@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import oracle.jdbc.driver.OracleDriver;
@@ -58,13 +59,14 @@ Scanner sc = new Scanner(System.in);
 				System.out.println("로그인 성공");
 				return true;
 			}else {
-				System.out.println("시도 횟수 3회 초과");
+				System.out.println("로그인 실패 아이디 또는 비밀번호를 확인해주세요.");
 			}
 		} catch (SQLException e) {
 			System.out.println("sbnSqlplus Exception : "+e.getMessage());
 		}
 		count++;
 		}
+		System.out.println("시도 횟수 3회 초과");
 		return false;
 	}
 	
@@ -102,9 +104,9 @@ Scanner sc = new Scanner(System.in);
 		System.out.println("포메이션을 선택해주세요");
 		System.out.println("1번 4-2-3-1\t2번 4-2-2-1-1\t3번 4-2-2-2\t4번 5-2-3");
 		System.out.println("     ★    \t      ★    \t   ★   ★  \t★   ★   ★");
-		System.out.println("  ★  ★  ★ \t      ★    \t ★       ★\t  ★   ★");
+		System.out.println("  ★  ★  ★ \t      ★    \t ★       ★\t  ★   ★  ");
 		System.out.println("   ★   ★  \t  ★       ★\t   ★   ★  \t★ ★ ★ ★ ★");
-		System.out.println(" ★  ★ ★  ★\t    ★   ★  \t ★  ★ ★  ★\t    ☆");
+		System.out.println(" ★  ★ ★  ★\t    ★   ★  \t ★  ★ ★  ★\t    ☆    ");
 		System.out.println("     ☆    \t  ★  ★ ★  ★\t     ☆    ");
 		System.out.println("          \t      ☆    ");
 		return num;
@@ -116,31 +118,49 @@ Scanner sc = new Scanner(System.in);
 		}
 		
 	}
+
 	
-	ArrayList<FIFADTO> list = new ArrayList<>();
-	
-	public ArrayList<FIFADTO> displayList() {
+	public List<FIFADTO> displayList() {
+		List<FIFADTO> list = new ArrayList<>();
 		try {
 			conn = getConn(); 
-			ps = conn.prepareStatement("SELECT * from korea");
+			ps = conn.prepareStatement("SELECT * from korea order by 1");
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				FIFADTO dto = new FIFADTO(rs.getInt("PLAYER_NUM"), rs.getString("PLAYER_NAME"), rs.getInt("PLAYER_AGE"), rs.getString("HEIGHT"), rs.getString("MAIN_FOOT"), rs.getString("POSITION"));
 				list.add(dto);
 			}
-			for(FIFADTO dto1 : list) {
-					System.out.print(+dto1.getPlayer_num()+"\t");
-					System.out.print(dto1.getPlayer_name()+"\t");
-					System.out.print(dto1.getPlayer_age()+"\t");
-					System.out.print(dto1.getHeight()+"\t");
-					System.out.print(dto1.getMain_foot()+"\t");
-					System.out.print(dto1.getPosition()+"\t");
-					System.out.println();
-				}
 		} catch (SQLException e) {
 			System.out.println("sbnSqlplus Exception : "+e.getMessage());
 		}
+		for(FIFADTO dto1 : list) {
+			System.out.print(dto1.getPlayer_num()+"\t");
+			System.out.print(dto1.getPlayer_name()+"\t");
+			System.out.print(dto1.getPlayer_age()+"\t");
+			System.out.print(dto1.getHeight()+"\t");
+			System.out.print(dto1.getMain_foot()+"\t");
+			System.out.print(dto1.getPosition()+"\t");
+			System.out.println();
+		}
 		return list;
+	}
+	
+	public void displayPlayer(String str) {
+		
+		try {
+			conn = getConn(); 
+			ps = conn.prepareStatement(str);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+		System.out.print("1. 이름 : "+rs.getString("player_name")+" ");
+		System.out.print("2. 나이 : "+rs.getInt("player_age")+" ");
+		System.out.print("3. 키 : "+rs.getString("height")+" ");
+		System.out.print("4. 주발 : "+rs.getString("main_foot")+" ");
+		System.out.println("5. 포지션 : "+rs.getString("position"));
+		} 
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void buyPlayer(int num) {
@@ -160,9 +180,22 @@ Scanner sc = new Scanner(System.in);
 				System.out.println();
 			}
 		}
-		return bp;
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// 관리자
+	
 	
 	
 	

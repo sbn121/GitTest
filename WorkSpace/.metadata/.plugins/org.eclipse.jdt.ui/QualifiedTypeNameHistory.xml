@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="dao.dto.method.MethodTest"/>
-    <fullyQualifiedTypeName name="extend.imp.SuperParent"/>
-    <fullyQualifiedTypeName name="extend.imp.ChildClass"/>
-    <fullyQualifiedTypeName name="extend.imp.TestInterface"/>
     <fullyQualifiedTypeName name="poly.전지현"/>
     <fullyQualifiedTypeName name="poly.송빛나"/>
     <fullyQualifiedTypeName name="pack01.inputstream.Ex05_Buffer"/>
@@ -29,15 +25,12 @@
     <fullyQualifiedTypeName name="pack01.list.TestDTO"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="pack01.list.BoardMain"/>
     <fullyQualifiedTypeName name="pack01.list.BoardDAO"/>
     <fullyQualifiedTypeName name="pack01.list.BoardDTO"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="pack03.mysqlplus.SqlDAO"/>
     <fullyQualifiedTypeName name="pack03.mysqlplus.SqlPlusMain"/>
-    <fullyQualifiedTypeName name="oracle.jdbc.driver.OracleDriver"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -53,11 +46,18 @@
     <fullyQualifiedTypeName name="org.apache.commons.mail.MultiPartEmail"/>
     <fullyQualifiedTypeName name="org.apache.commons.mail.EmailAttachment"/>
     <fullyQualifiedTypeName name="java.net.URL"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="org.apache.commons.mail.HtmlEmail"/>
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
     <fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+    <fullyQualifiedTypeName name="oracle.jdbc.driver.OracleDriver"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="oracle.jdbc.driver.OracleConversionInputStreamInternal"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="pack_fifa.FIFADTO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="pack_fifa.FIFAUSERDAO"/>
+    <fullyQualifiedTypeName name="pack_fifa.FIFAADMINDAO"/>
 </qualifiedTypeNameHistroy>

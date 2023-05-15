@@ -1,0 +1,306 @@
+package pack_fifa;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import oracle.jdbc.driver.OracleDriver;
+
+public class FIFAUSERDAO {
+	Connection conn;
+	PreparedStatement ps;
+	ResultSet rs;
+	
+
+	public Connection getConn() {
+		String url = "jdbc:oracle:thin:@211.223.59.99:1521:xe";
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection(url, "hanul", "0000");
+		} catch (Exception e) {
+			System.out.println(" 알 수 없는 오류 발생! 개발자에게 문의하세요. ");
+		}
+		return conn;
+	}
+
+	public void dbClose() {
+		try {
+			if(rs!=null) {rs.close();}
+			if(ps!=null) {ps.close();}
+			if(conn!=null) {conn.close();}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+String id;
+Scanner sc = new Scanner(System.in);	
+
+	public boolean login() {
+		
+		int count = 0;
+		while(count<3) {
+			System.out.print("아이디 : ");
+			id = sc.nextLine();
+			System.out.print("비밀번호 : ");
+			String pw = sc.nextLine();
+		try {
+			conn = getConn(); 
+			ps = conn.prepareStatement("select * from USERKOREA "
+							+ "where USER_ID = '"+id+"' "
+							+ "AND USER_PW = '"+pw+"'");
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				System.out.println("로그인 성공");
+				return true;
+			}else {
+				System.out.println("로그인 실패 아이디 또는 비밀번호를 확인해주세요.");
+			}
+		} catch (SQLException e) {
+			System.out.println("sbnSqlplus Exception : "+e.getMessage());
+		}
+		count++;
+		}
+		System.out.println("시도 횟수 3회 초과");
+		return false;
+	}
+	
+	
+	ArrayList<FIFADTO> myList = new ArrayList<>();
+	
+	
+	public int inputInt() {
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			try {
+				int rtnInt = Integer.parseInt(sc.nextLine());
+				return rtnInt;
+			}catch (Exception e) {
+				System.out.println("숫자 값만 입력해주세요.");
+			}
+		}
+	}
+	
+	
+	
+	public void searchMyPlayer() {
+		for(int i=0; i<myList.size(); i++) {
+			System.out.print("번호 : "+myList.get(i).getPlayer_num());
+			System.out.print("이름 : "+myList.get(i).getPlayer_name());
+			System.out.print("나이 : "+myList.get(i).getPlayer_age());
+			System.out.print("키 : "+myList.get(i).getHeight());
+			System.out.print("주발 : "+myList.get(i).getMain_foot());
+			System.out.print("번호 : "+myList.get(i).getPosition());
+			System.out.println();
+		}
+	}
+	
+	public int formation(int num) {
+		System.out.println("포메이션을 선택해주세요");
+		System.out.println("1번 4-2-3-1\t2번 4-2-2-1-1\t3번 4-2-2-2\t4번 5-2-3");
+		System.out.println("     ★    \t      ★    \t   ★   ★  \t★   ★   ★");
+		System.out.println("  ★  ★  ★ \t      ★    \t ★       ★\t  ★   ★  ");
+		System.out.println("   ★   ★  \t  ★       ★\t   ★   ★  \t★ ★ ★ ★ ★");
+		System.out.println(" ★  ★ ★  ★\t    ★   ★  \t ★  ★ ★  ★\t    ☆    ");
+		System.out.println("     ☆    \t  ★  ★ ★  ★\t     ☆    ");
+		System.out.println("          \t      ☆    ");
+		return num;
+	}
+	
+	public void candidate() {
+		for(int i=0; i<myList.size(); i++) {
+			System.out.println(myList.get(i));
+		}
+		
+	}
+
+	
+	public List<FIFADTO> displayList() {
+		List<FIFADTO> list = new ArrayList<>();
+		try {
+			conn = getConn(); 
+			ps = conn.prepareStatement("SELECT * from korea order by 1");
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				FIFADTO dto = new FIFADTO(rs.getInt("PLAYER_NUM"), rs.getString("PLAYER_NAME"), rs.getInt("PLAYER_AGE"), rs.getString("HEIGHT"), rs.getString("MAIN_FOOT"), rs.getString("POSITION"));
+				list.add(dto);
+			}
+		} catch (SQLException e) {
+			System.out.println("sbnSqlplus Exception : "+e.getMessage());
+		}
+		for(FIFADTO dto1 : list) {
+			System.out.print(dto1.getPlayer_num()+"\t");
+			System.out.print(dto1.getPlayer_name()+"\t");
+			System.out.print(dto1.getPlayer_age()+"\t");
+			System.out.print(dto1.getHeight()+"\t");
+			System.out.print(dto1.getMain_foot()+"\t");
+			System.out.print(dto1.getPosition()+"\t");
+			System.out.println();
+		}
+		return list;
+	}
+	
+	public void buyPlayer(int num) {
+		
+	}
+	
+	public void sellPlayer() {
+		
+	}
+	
+	public int chargeBp() {
+		System.out.println("충전할 금액을 선택해주세요.");
+		System.out.println("1. 1억bp(1,000원) 2. 5억bp(5,000원) 3. 10억bp(10,000원) 4. 100억bp(100,000원)");
+		int bp = inputInt();
+		while(true) {
+			if(bp==1||bp==2||bp==3||bp==4) {
+				System.out.println();
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// 관리자
+	public boolean adminLogin() {
+		int count =0;
+		while(count<3) {
+		System.out.print("아이디 : ");
+		String id = sc.nextLine();
+		System.out.print("비밀번호 : ");
+		String pw = sc.nextLine();
+		if(id.equals("admin")&&pw.equals("adminpw")) {
+			System.out.println("관리자 모드로 로그인 되었습니다.");
+			return true;
+		}else {
+			System.out.println("로그인 실패 아이디 또는 비밀번호를 확인해주세요.");
+		}
+		count++;
+	}System.out.println("시도 횟수 3회를 초과했습니다.");
+		return false;
+		}
+	
+	public void addPlayer() {
+		System.out.println("추가할 선수의 정보를 차례대로 입력해주세요.");
+		try {
+			conn = getConn(); 
+			ps = conn.prepareStatement("INSERT INTO KOREA SELECT MAX(PLAYER_NUM)+1, ?, ?, ?, ?, ? FROM KOREA"); 
+			System.out.print("이름 : ");
+			ps.setString(1, sc.nextLine());
+			System.out.print("나이 : ");
+			ps.setInt(2, Integer.parseInt(sc.nextLine()));
+			System.out.print("키 : ");
+			ps.setString(3, sc.nextLine());
+			System.out.print("주발 : ");
+			ps.setString(4, sc.nextLine());
+			System.out.print("포지션 : ");
+			ps.setString(5, sc.nextLine());
+			int i= ps.executeUpdate();
+			if(i==1) {
+				System.out.println("선수를 추가했습니다.");
+			}else {
+				System.out.println("선수 추가 실패");
+			}
+		} catch (SQLException e) {
+			System.out.println("sbnSqlplus Exception : "+e.getMessage());
+		} finally {
+			dbClose();
+		}
+	}
+	
+	public void updatePlayer(int num) {
+		
+		try {
+//			System.out.println("수정할 선수의 정보를 차례대로 입력해주세요.");
+			conn = getConn(); 
+			ps = conn.prepareStatement("SELECT * FROM KOREA WHERE PLAYER_NUM = '"+num+"'"); 
+			rs = ps.executeQuery();
+			while(rs.next()) {
+			System.out.print("1. 이름 : "+rs.getString("player_name")+" ");
+			System.out.print("2. 나이 : "+rs.getInt("player_age")+" ");
+			System.out.print("3. 키 : "+rs.getString("height")+" ");
+			System.out.print("4. 주발 : "+rs.getString("main_foot")+" ");
+			System.out.println("5. 포지션 : "+rs.getString("position"));
+			while(true) {
+			int selectNum = inputInt();
+			if(selectNum==1) {
+				conn = getConn();
+				System.out.print(rs.getString("player_name")+" -> ");
+				ps = conn.prepareStatement("UPDATE KOREA SET PLAYER_NAME = '"+sc.nextLine()+"' FROM PLAYER_NUM = '"+num+"'"); 
+				int i= ps.executeUpdate();
+				if(i==1) {
+					System.out.println("정보 수정이 완료되었습니다.");
+					conn = getConn(); 
+					ps = conn.prepareStatement("SELECT * FROM KOREA WHERE PLAYER_NUM = '"+num+"'"); 
+					rs = ps.executeQuery();
+					while(rs.next()) {
+					System.out.print("1. 이름 : "+rs.getString("player_name")+" ");
+					System.out.print("2. 나이 : "+rs.getInt("player_age")+" ");
+					System.out.print("3. 키 : "+rs.getString("height")+" ");
+					System.out.print("4. 주발 : "+rs.getString("main_foot")+" ");
+					System.out.println("5. 포지션 : "+rs.getString("position"));
+				}
+			}else if(selectNum==2) {
+				
+			}else if(selectNum==3) {
+				
+			}else if(selectNum==4) {
+				
+			}else if(selectNum==5) {
+				
+			}else {
+				System.out.println("입력 오류 1~5사이의 수를 입력하세요");
+			}
+			}
+			}
+			}
+			System.out.println("선수의 수정할 부분의 번호를 입력해주세요");
+//			System.out.println(rs.getString(""));
+//			int i= ps.executeUpdate();
+//			if(i==1) {
+//				System.out.println("선수를 추가했습니다.");
+//			}else {
+//				System.out.println("선수 추가 실패");
+//			}
+		} catch (SQLException e) {
+			System.out.println("sbnSqlplus Exception : "+e.getMessage());
+		} finally {
+			dbClose();
+		}
+	}
+	
+	public void deletePlayer(int num) {
+		try {
+			conn = getConn(); 
+			ps = conn.prepareStatement("DELETE FROM KOREA WHERE PLAYER_NUM = ?"); 
+			ps.setInt(1, num);
+			int i= ps.executeUpdate();
+			if(i==1) {
+				System.out.println("선수를 삭제했습니다.");
+				
+			}else {
+				System.out.println("선수 삭제 실패");
+			}
+		} catch (SQLException e) {
+			System.out.println("sbnSqlplus Exception : "+e.getMessage());
+		} finally {
+			dbClose();
+		}
+	}
+	
+}

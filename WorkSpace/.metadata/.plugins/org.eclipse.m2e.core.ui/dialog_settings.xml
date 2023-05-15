@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="9999.FIFA"/>
 			<item value="07.Class5_6PackageSingleTone"/>
 			<item value="14.ExternalAPI_Maven"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="9999.FIFA"/>
 			<item value="07.Class5_6PackageSingleTone"/>
 			<item value="14.ExternalAPI_Maven"/>
 		</list>
