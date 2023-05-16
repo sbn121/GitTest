@@ -157,11 +157,6 @@ Scanner sc = new Scanner(System.in);
 	public void candidate() {
 		try {
 			conn = getConn(); 
-			ps = conn.prepareStatement("SELECT PLAYER_NUM FROM FIFAMYMEMBER WHERE MEMBER_ID = ?");
-			ps.setString(1, id);
-			rs = ps.executeQuery();
-			if(rs.next()) {
-			conn = getConn(); 
 			ps = conn.prepareStatement("SELECT m.PLAYER_NUM, k.player_name, k.player_age, k.height, k.main_foot, k.position, k.price  from FIFAMYMEMBER m , korea k WHERE k.player_num = m.player_num and MEMBER_ID = ? AND m.main = 'MAIN' ORDER BY PLAYER_NUM");
 			ps.setString(1, id);
 			rs = ps.executeQuery();
@@ -189,13 +184,13 @@ Scanner sc = new Scanner(System.in);
 					while(true) {
 					int num = inputInt();
 					conn = getConn(); 
-					ps = conn.prepareStatement("SELECT PLAYER_NUM FROM FIFAMYMEMBER WHERE PLAYER_NUM = ? AND MAIN = 'SERVE'");
+					ps = conn.prepareStatement("SELECT PLAYER_NUM FROM FIFAMYMEMBER WHERE PLAYER_NUM = ?");
 					ps.setInt(1, num);
 					rs = ps.executeQuery();
 					if(rs.next()) {
 						System.out.println("추가가 완료되었습니다.");
 						conn = getConn(); 
-						ps = conn.prepareStatement("UPDATE FIFAMYMEMBER SET MAIN = 'MAIN' WHERE PLAYER_NUM = ?");
+						ps = conn.prepareStatement("UPDATE FIFAMYMEMBER SET MAIN = 'MAIN' WHERE PLAYER_ID = ?");
 						ps.setInt(1, num);
 						rs = ps.executeQuery();
 						conn = getConn(); 
@@ -208,15 +203,12 @@ Scanner sc = new Scanner(System.in);
 						}
 						break;
 					}else {
-						System.out.println("입력 오류 현재 소유하고 있는 후보 선수의 번호를 입력해주세요.");
+						System.out.println("입력 오류 현재 소유하고 있는 선수의 번호를 입력해주세요.");
 					}
 					}
 				}else {
 					
 				}
-			}
-			}else {
-				System.out.println("현재 소유하고 있는 선수가 없습니다.");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

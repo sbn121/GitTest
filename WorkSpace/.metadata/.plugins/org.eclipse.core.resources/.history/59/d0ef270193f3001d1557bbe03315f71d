@@ -63,7 +63,6 @@ public class FIFAMAIN {
 								dao.formation();
 								break;
 							}else if(menu==2) {
-								dao.candidate();
 								break;
 							}else {
 								System.out.println("입력 오류 1 또는 2를 입력해주세요.");
