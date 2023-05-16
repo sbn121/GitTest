@@ -48,9 +48,8 @@ public class FIFAMAIN {
 						System.out.println("1. 내 선수 검색");
 						System.out.println("2. 스쿼드");
 						System.out.println("3. 상점");
-						System.out.println("4. 상태");
-						System.out.println("5. 탈퇴");
-						System.out.println("6. 로그아웃");
+						System.out.println("4. 탈퇴");
+						System.out.println("5. 로그아웃");
 						menu = dao.inputInt();
 						if(menu==1) {
 							dao.searchMyPlayer();
@@ -72,24 +71,21 @@ public class FIFAMAIN {
 						}else if(menu==3) {
 							System.out.println("1. 선수 구매하기");
 							System.out.println("2. 선수 판매하기");
+							System.out.println("3. Bp 충전하기");
 							menu = dao.inputInt();
 							if(menu==1) {
-								dao.displayList();
-								System.out.println("구매할 선수의 번호를 입력해주세요.");
-								menu = dao.inputInt();
-								dao.buyPlayer(menu);
-								
+								dao.buyPlayer();
 							}else if(menu==2) {
 								dao.sellPlayer();
+							}else if(menu==3) {
+								dao.chargeBp();
 							}else {
 								System.out.println("입력오류 1 또는 2를 입력해주세요");
 							}
 						}else if(menu==4) {
-							
-						}else if(menu==5) {
 							dao.signout();
 							break;
-						}else if(menu==6) {
+						}else if(menu==5) {
 							System.out.println("로그아웃 되었습니다");
 							break;
 						}else {

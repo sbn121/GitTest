@@ -249,26 +249,30 @@ Scanner sc = new Scanner(System.in);
 		return list;
 	}
 	
-	public void displayPlayer(String str) {
-		
+	public void buyPlayer() {
 		try {
 			conn = getConn(); 
-			ps = conn.prepareStatement(str);
+			ps = conn.prepareStatement("select player_num from korea where player_num = ?");
+			ps.setString(1, id);
 			rs = ps.executeQuery();
-			while(rs.next()) {
-		System.out.print("1. 이름 : "+rs.getString("player_name")+" ");
-		System.out.print("2. 나이 : "+rs.getInt("player_age")+" ");
-		System.out.print("3. 키 : "+rs.getString("height")+" ");
-		System.out.print("4. 주발 : "+rs.getString("main_foot")+" ");
-		System.out.println("5. 포지션 : "+rs.getString("position"));
-		} 
+		displayList();
+		System.out.println("현재 소지 Bp : ");
+		System.out.println("구매하실 선수의 번호를 입력해주세요.");
+		while(true) {
+		int num = inputInt();
+			conn = getConn(); 
+			ps = conn.prepareStatement("select player_num from korea where player_num = ?");
+			ps.setInt(1, num);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				break;
+			}else {
+				System.out.println("입력하신 번호에 해당하는 선수가 없습니다. 다시 입력해주세요.");
+			}
+		}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public void buyPlayer(int num) {
-		
 	}
 	
 	public void sellPlayer() {
