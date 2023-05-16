@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="poly.전지현"/>
     <fullyQualifiedTypeName name="poly.송빛나"/>
     <fullyQualifiedTypeName name="pack01.inputstream.Ex05_Buffer"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="pack_fifa.FIFAUSERDAO"/>
     <fullyQualifiedTypeName name="pack_fifa.FIFAADMINDAO"/>
+    <fullyQualifiedTypeName name="pack_fifa.FIFASIGNUPDAO"/>
 </qualifiedTypeNameHistroy>
