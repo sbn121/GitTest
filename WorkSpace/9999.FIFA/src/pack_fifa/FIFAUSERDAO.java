@@ -51,9 +51,9 @@ Scanner sc = new Scanner(System.in);
 			String pw = sc.nextLine();
 		try {
 			conn = getConn(); 
-			ps = conn.prepareStatement("select * from USERKOREA "
-							+ "where USER_ID = '"+id+"' "
-							+ "AND USER_PW = '"+pw+"'");
+			ps = conn.prepareStatement("select * from FIFAMEMBER "
+							+ "where MEMBER_ID = '"+id+"' "
+							+ "AND MEMBER_PASSWORD = '"+pw+"'");
 			rs = ps.executeQuery();
 			if(rs.next()) {
 				System.out.println("로그인 성공");
@@ -70,8 +70,7 @@ Scanner sc = new Scanner(System.in);
 		return false;
 	}
 	
-	
-	ArrayList<FIFADTO> myList = new ArrayList<>();
+
 	
 	
 	public int inputInt() {
@@ -86,21 +85,43 @@ Scanner sc = new Scanner(System.in);
 		}
 	}
 	
-	
-	
-	public void searchMyPlayer() {
-		for(int i=0; i<myList.size(); i++) {
-			System.out.print("번호 : "+myList.get(i).getPlayer_num());
-			System.out.print("이름 : "+myList.get(i).getPlayer_name());
-			System.out.print("나이 : "+myList.get(i).getPlayer_age());
-			System.out.print("키 : "+myList.get(i).getHeight());
-			System.out.print("주발 : "+myList.get(i).getMain_foot());
-			System.out.print("번호 : "+myList.get(i).getPosition());
-			System.out.println();
+	public void displayInfo() {
+		try {
+			System.out.print(rs.getInt("player_num")+" ");
+		System.out.print(rs.getString("player_name")+" ");
+		System.out.print(rs.getInt("player_age")+" ");
+		System.out.print(rs.getString("height")+" ");
+		System.out.print(rs.getString("main_foot")+" ");
+		System.out.print(rs.getString("position")+" ");
+		System.out.println(rs.getInt("price"));
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 	
-	public int formation(int num) {
+	public void searchMyPlayer() {
+		try {
+			conn = getConn(); 
+			ps = conn.prepareStatement("SELECT m.PLAYER_NUM, k.player_name, k.player_age, k.height, k.main_foot, k.position, k.price  from FIFAMYMEMBER m , korea k WHERE k.player_num = m.player_num and MEMBER_ID = ?");
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				displayInfo();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void formation() {
+		try {
+			conn = getConn(); 
+			ps = conn.prepareStatement("SELECT FORMATION from FIFAMEMBER WHERE MEMBER_ID = ?");
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+		System.out.println("현재 내 포메이션 : "+rs.getString("FORMATION"));
+			}
 		System.out.println("포메이션을 선택해주세요");
 		System.out.println("1번 4-2-3-1\t2번 4-2-2-1-1\t3번 4-2-2-2\t4번 5-2-3");
 		System.out.println("     ★    \t      ★    \t   ★   ★  \t★   ★   ★");
@@ -109,13 +130,28 @@ Scanner sc = new Scanner(System.in);
 		System.out.println(" ★  ★ ★  ★\t    ★   ★  \t ★  ★ ★  ★\t    ☆    ");
 		System.out.println("     ☆    \t  ★  ★ ★  ★\t     ☆    ");
 		System.out.println("          \t      ☆    ");
-		return num;
+		String[] formation = {"4-2-3-1", "4-2-2-1-1", "4-2-2-2", "5-2-3"};
+		while(true) {
+			int num = inputInt();
+			if(num==1||num==2||num==3||num==4) {
+				System.out.println(num+"번 포메이션이 선택되었습니다.");
+				conn = getConn(); 
+				ps = conn.prepareStatement("UPDATE FIFAMEMBER SET FORMATION = ? WHERE MEMBER_ID = ?");
+				ps.setString(1, formation[num-1]);
+				ps.setString(2, id);
+				rs = ps.executeQuery();
+				break;
+			}else {
+				System.out.println("입력오류 1~4사이의 수를 입력하세요.");
+			}
+		}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public void candidate() {
-		for(int i=0; i<myList.size(); i++) {
-			System.out.println(myList.get(i));
-		}
 		
 	}
 
@@ -127,7 +163,7 @@ Scanner sc = new Scanner(System.in);
 			ps = conn.prepareStatement("SELECT * from korea order by 1");
 			rs = ps.executeQuery();
 			while(rs.next()) {
-				FIFADTO dto = new FIFADTO(rs.getInt("PLAYER_NUM"), rs.getString("PLAYER_NAME"), rs.getInt("PLAYER_AGE"), rs.getString("HEIGHT"), rs.getString("MAIN_FOOT"), rs.getString("POSITION"));
+				FIFADTO dto = new FIFADTO(rs.getInt("PLAYER_NUM"), rs.getString("PLAYER_NAME"), rs.getInt("PLAYER_AGE"), rs.getString("HEIGHT"), rs.getString("MAIN_FOOT"), rs.getString("POSITION"), rs.getInt("PRICE"));
 				list.add(dto);
 			}
 		} catch (SQLException e) {
@@ -140,7 +176,7 @@ Scanner sc = new Scanner(System.in);
 			System.out.print(dto1.getHeight()+"\t");
 			System.out.print(dto1.getMain_foot()+"\t");
 			System.out.print(dto1.getPosition()+"\t");
-			System.out.println();
+			System.out.println(dto1.getPrice());
 		}
 		return list;
 	}
@@ -183,35 +219,23 @@ Scanner sc = new Scanner(System.in);
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	// 관리자
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public void signout() {
+		System.out.println("비밀번호 : ");
+		
+		try {
+			conn = getConn(); 
+			ps = conn.prepareStatement("select * from FIFAMEMBER where MEMBER_ID = '"+id+"' "
+							+ "AND MEMBER_PASSWORD = '"+sc.nextLine()+"'");
+			rs = ps.executeQuery();
+		if(rs.next()) {
+			System.out.println("회원 탈퇴가 완료되었습니다.");
+			conn = getConn(); 
+			ps = conn.prepareStatement("DELETE FROM FIFAMEMBER WHERE MEMBER_ID = '"+id+"'");
+			rs = ps.executeQuery();
+		}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	
 }

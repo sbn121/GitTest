@@ -5,6 +5,7 @@ public class FIFADTO {
 	private String player_name;
 	private int player_age;
 	private String height, main_foot, position;
+	private int price;
 	
 	
 	
@@ -12,14 +13,14 @@ public class FIFADTO {
 	
 	
 	public FIFADTO(int player_num, String player_name, int player_age, String height, String main_foot,
-			String position) {
-		super();
+			String position, int price) {
 		this.player_num = player_num;
 		this.player_name = player_name;
 		this.player_age = player_age;
 		this.height = height;
 		this.main_foot = main_foot;
 		this.position = position;
+		this.price = price;
 	}
 	public int getPlayer_num() {
 		return player_num;
@@ -56,6 +57,12 @@ public class FIFADTO {
 	}
 	public void setPosition(String position) {
 		this.position = position;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	
 	
