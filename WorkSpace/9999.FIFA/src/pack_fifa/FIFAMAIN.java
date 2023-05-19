@@ -72,13 +72,16 @@ public class FIFAMAIN {
 							System.out.println("1. 선수 구매하기");
 							System.out.println("2. 선수 판매하기");
 							System.out.println("3. Bp 충전하기");
+							System.out.println("4. 현재 보유 Bp 확인하기");
 							menu = dao.inputInt();
 							if(menu==1) {
-								dao.buyPlayer();
+								dao.purchase();
 							}else if(menu==2) {
-								dao.sellPlayer();
+								dao.sell();
 							}else if(menu==3) {
-								dao.chargeBp();
+								dao.chargeBP();
+							}else if(menu==4) {
+								dao.checkBP();
 							}else {
 								System.out.println("입력오류 1 또는 2를 입력해주세요");
 							}

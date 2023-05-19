@@ -103,10 +103,41 @@ public void addPlayer() {
 		ps.setInt(2, inputInt());
 		System.out.print("키 : ");
 		ps.setString(3, sc.nextLine());
-		System.out.print("주발(right, left, both) : ");
-		ps.setString(4, sc.nextLine());
-		System.out.print("포지션(MF, FW, DF, GK) : ");
-		ps.setString(5, sc.nextLine());
+		while(true) {
+		System.out.print("주발(1. right, 2. left, 3. both) : ");
+		int num = inputInt();
+		if(num==1) {
+			ps.setString(4, "right");
+			break;
+		}else if(num==2) {
+			ps.setString(4, "left");
+			break;
+		}else if(num==3) {
+			ps.setString(4, "both");
+			break;
+		}else {
+			System.out.println("입력 오류 1~3사이의 수를 입력해주세요.");
+		}
+		}
+		while(true) {
+			System.out.print("포지션(1. MF, 2. FW, 3. DF, 4. GK) : ");;
+			int num = inputInt();
+			if(num==1) {
+				ps.setString(5, "MF");
+				break;
+			}else if(num==2) {
+				ps.setString(5, "FW");
+				break;
+			}else if(num==3) {
+				ps.setString(5, "DF");
+				break;
+			}else if(num==4){
+				ps.setString(5, "GK");
+				break;
+			}else {
+				System.out.println("입력 오류 1~4 사이의 수를 입력해주세요.");
+			}
+			}
 		System.out.print("가격 : ");
 		ps.setInt(6, inputInt());
 		int i= ps.executeUpdate();
